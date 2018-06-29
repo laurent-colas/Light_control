@@ -57,7 +57,7 @@ def MotionHandler():
 		'fan': ['A01','A02'],
 		'light': ['A03','A04']
 	}
-
+	
 	targetPins = locationDict[light]
 	for i in range(len(targetPins)):
 		command = "%s %d" % (targetPins[i], state)
@@ -73,16 +73,18 @@ def MotionHandler():
 def ButtonHandler():
         light = request.args.get('light', default = '*', type = str)
         state = request.args.get('state', default = 2, type = int)
+		
         print(light);
         print(state);
-        # http://192.168.0.106/MotionDetector?light=livingroom&state=1
+		
+        # http://192.168.0.106/ButtonDetector?light=B1&state=1
 
-        locationDict = defaultdict(list)
-        locationDict = {
-                'fan': ['A01','A02'],
-                'light': ['A03','A04']
+		ButtonDict = defaultdict(list) #link between the physical button and relay adresse
+		ButtonDict = {
+                'B1': ['A01','A02'],
+                'B2': ['A03','A04']
         }
-
+		
         targetPins = locationDict[light]
         for i in range(len(targetPins)):
                 command = "%s %d" % (targetPins[i], state)
