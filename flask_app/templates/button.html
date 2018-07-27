@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
     <body>
+
+
+
         <form method="post" action="{{ url_for('divide') }}">
             {{ form.hidden_tag() }}
 
-            <input type="submit" name="submit" value="B1"/>
-            <input type="submit" name="submit" value="B2"/>
+
+
+        <table border = 1>
+            {% for key, value in list_places.items() %}
+                <tr>
+                    <th> <input type="submit" name="submit" value="{{key}}"/> </th>
+                    {% if value[0] == 0 %}
+                        <td> <img src="{{ url_for('static',filename="light-bulb-off.jpg") }}"/> </td>
+                    {% else %}
+                        <td> <img src="{{ url_for('static',filename="light-bulb-on.jpg") }}"/> </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
         </form>
-        {% if result %}
-            Result is: {{ result }}
-        {% endif %}
+
+
     </body>
 </html>
