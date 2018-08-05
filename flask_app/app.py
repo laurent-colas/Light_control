@@ -1,10 +1,13 @@
 from flask import Flask, request, render_template
 from collections import defaultdict
 from flask_wtf import FlaskForm
-from wtforms import FloatField
 
+from wtforms import Form, FloatField, RadioField, StringField, validators
+from wtforms.validators import DataRequired
 import comm_functions as comm
 import adresse_lib as address_lib
+
+import csv
 
 '''
 import RPi.GPIO as GPIO
@@ -54,65 +57,80 @@ def hello_world():
     return 'Hello World!'
 
 
+class DivideForm(FlaskForm):
+    numerator = FloatField("Number")
+    denominator = FloatField("Divide by")
+
+
+class MacroForm(FlaskForm):
+    choices = list(address_lib.places_name.keys())
+    macro_new_name = StringField('Name of macro', validators=[DataRequired()])
+
+
+
+@app.route('/add_macros', methods=['GET', 'POST'])
+def add_macros():
+    form = MacroForm()
+    button_form = DivideForm()
+    choices = list(address_lib.places_name.keys())
+    list_places = address_lib.places_name
+    if form.validate():
+        macro_list_name = address_lib.macros_names
+        name_new_macro = form.macro_new_name.data
+        macro_places = request.form.getlist('room')
+        macro_places.insert(0,0)
+        macro_list_name[name_new_macro] = macro_places
+        return render_template('macros_button.html',list_macros=macro_list_name, form=button_form)
+    return render_template('macros.html', form=form, choices=choices)
+
+
+@app.route('/macros', methods=['GET', 'POST'])
+def macros():
+    button_form = DivideForm()
+    macro_list_name = address_lib.macros_names
+    list_places = address_lib.places_name
+
+    if button_form.validate_on_submit():
+        macro_name = request.form['submit']
+        list_of_imp_macro = macro_list_name[macro_name]
+
+        if list_of_imp_macro[0] == 1:
+            list_of_imp_macro[0] = 0
+        else:
+            list_of_imp_macro[0] = 1
+
+        for key in list_places.keys():
+            for i in range(1, len(list_of_imp_macro)):
+                if list_of_imp_macro[i] == key:
+                    list_places[key][0] = list_of_imp_macro[0]
+
+                final_target_pins = list_places[list_of_imp_macro[i]][1:]
+                final_state = list_places[list_of_imp_macro[i]][0]
+                comm.simulate_send_address(final_target_pins, final_state)
+
+    return render_template('macros_button.html', list_macros=macro_list_name, form=button_form)
+
+
 @app.route('/', methods=['GET', 'POST'])
 def divide():
 
-    class DivideForm(FlaskForm):
-        numerator = FloatField("Number")
-        denominator = FloatField("Divide by")
-
     form = DivideForm()
-    result = None
-
     list_places =address_lib.places_name
-
-
-
     if form.validate_on_submit():
         #   receive
         light_address = request.form['submit']
-        # light_address = but_val
-
-        # light_address_name = request.form['place']
-
-        # light_address = but_val[0:2]
-        # light_state = but_val[2:]
-        # test = but_val[3:]
-
-        light_state = 3
 
         for key in list_places.keys():
             if light_address == key:
                 target_pins = list_places[key]
-                address_key = key
                 if target_pins[0] == 1:
                     list_places[key][0] = 0
                 else:
                     list_places[key][0] = 1
 
-                #
-                # if list_places[key] == 1:
-                #     list_places[key] = 0
-                #     light_state = 0
-                # else:
-                #     list_places[key] = 1
-                #     light_state = 1
-
-        result = 3
-        # targetPins = address_lib.button_address[light_address]
         final_target_pins = list_places[light_address][1:]
         final_state = list_places[light_address][0]
-
         comm.simulate_send_address(final_target_pins, final_state)
-        # if light_address == "B1":
-        #     result = 1
-        # elif light_address == "B2":
-        #     result = 2
-        # else:
-        #     result = 3
-
-
-
 
     return render_template('button.html',list_places=list_places, form=form)
 

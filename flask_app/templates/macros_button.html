@@ -1,17 +1,16 @@
 {% extends 'base.html' %}
 
 {% block header %}
-    <h1>{% block title %}All lights{% endblock %}</h1>
+    <h1>{% block title %}Macros{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-<form method="post" action="{{ url_for('divide') }}">
-            {{ form.hidden_tag() }}
-
+    <form method="post" action="{{ url_for('macros') }}">
+        {{ form.hidden_tag() }}
         <table border = 1>
-            {% for key, value in list_places.items() %}
+            {% for key, value in list_macros.items() %}
                 <tr>
-                    <th> <input type="submit" name="submit" value="{{key}}"/> </th>
+                    <th> <input type="submit" name="submit" value="{{key}}"/></th>
                     {% if value[0] == 0 %}
                         <td> <img src="{{ url_for('static',filename="light-bulb-off.jpg") }}"/> </td>
                     {% else %}
@@ -20,5 +19,5 @@
                 </tr>
             {% endfor %}
         </table>
-        </form>
+    </form>
 {% endblock %}

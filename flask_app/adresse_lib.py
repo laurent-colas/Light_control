@@ -77,6 +77,9 @@ motion_detect_address = {
 #
 # }
 
+macros_names = {'nameone': [0,'Garde-Robe','Entrée près de la porte','Entrée vers le salon'],
+                }
+
 places_name = {
     'Garde-Robe': [0, 'A01', 'A02'],
     'Entrée près de la porte': [0, 'A01', 'A02'],
@@ -145,6 +148,7 @@ places_name = {
     'Façade arrière': [0, 'A01', 'A02'],
     'Terrain' :[0, 'A01', 'A02']
 }
+
 button_all_addresses = {
     "B1",
     "B2",
