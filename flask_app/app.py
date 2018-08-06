@@ -1,13 +1,11 @@
 from flask import Flask, request, render_template
-from collections import defaultdict
+# from collections import defaultdict
 from flask_wtf import FlaskForm
 
-from wtforms import Form, FloatField, RadioField, StringField, validators
+from wtforms import FloatField, StringField
 from wtforms.validators import DataRequired
 import comm_functions as comm
 import adresse_lib as address_lib
-
-import csv
 
 '''
 import RPi.GPIO as GPIO
@@ -27,28 +25,43 @@ app.config['SECRET_KEY'] = 'you-will-never-guess'
 
 # http://192.168.0.106/MotionDetector?light=D1&state=1
 @app.route('/MotionDetector')
-def MotionHandler():
+def motion_handler():
     light = request.args.get('light', default='*', type=str)
-    state = request.args.get('state', default=2, type=int)
+    # state = request.args.get('state', default=0, type=int)
 
-    targetPins = address_lib.motion_detect_address[light]
+    target_place = address_lib.motion_detect_address[light]
+    final_target_pins = address_lib.places_name[target_place]
 
-    comm.send_address(bus, address, targetPins, state)
+    if final_target_pins[0] == 1:
+        address_lib.places_name[target_place][0] = 0
+    else:
+        address_lib.places_name[target_place][0] = 1
+    comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[target_place][0])
+
+    # comm.send_address(bus, address, targetPins, state)
 
     return 'Motion Detected from ESP8266'
 
 
 # http://192.168.0.106/ButtonDetector?light=B1&state=1
 @app.route('/ButtonDetector')
-def ButtonHandler():
+def button_handler():
     light = request.args.get('light', default='*', type=str)
-    state = request.args.get('state', default=2, type=int)
+    # state = request.args.get('state', default=0, type=int)
 
     # link between the physical button and relay address
-    targetPins = address_lib.button_address[light]
+    target_place = address_lib.button_address[light]
+    final_target_pins = address_lib.places_name[target_place]
 
-    comm.send_address(bus, address, targetPins, state)
+    if final_target_pins[0] == 1:
+        address_lib.places_name[target_place][0] = 0
+    else:
+        address_lib.places_name[target_place][0] = 1
 
+    comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[target_place][0])
+    # targetPins = address_lib.button_address[light]
+    #
+    # comm.send_address(bus, address, targetPins, state)
     return 'Button pressed by ESP8266'
 
 
@@ -67,20 +80,19 @@ class MacroForm(FlaskForm):
     macro_new_name = StringField('Name of macro', validators=[DataRequired()])
 
 
-
 @app.route('/add_macros', methods=['GET', 'POST'])
 def add_macros():
     form = MacroForm()
     button_form = DivideForm()
     choices = list(address_lib.places_name.keys())
-    list_places = address_lib.places_name
+    # list_places = address_lib.places_name
     if form.validate():
         macro_list_name = address_lib.macros_names
         name_new_macro = form.macro_new_name.data
         macro_places = request.form.getlist('room')
-        macro_places.insert(0,0)
+        macro_places.insert(0, 0)
         macro_list_name[name_new_macro] = macro_places
-        return render_template('macros_button.html',list_macros=macro_list_name, form=button_form)
+        return render_template('macros_button.html', list_macros=macro_list_name, form=button_form)
     return render_template('macros.html', form=form, choices=choices)
 
 
@@ -115,7 +127,7 @@ def macros():
 def divide():
 
     form = DivideForm()
-    list_places =address_lib.places_name
+    list_places = address_lib.places_name
     if form.validate_on_submit():
         #   receive
         light_address = request.form['submit']
@@ -132,9 +144,8 @@ def divide():
         final_state = list_places[light_address][0]
         comm.simulate_send_address(final_target_pins, final_state)
 
-    return render_template('button.html',list_places=list_places, form=form)
+    return render_template('button.html', list_places=list_places, form=form)
 
 
 if __name__ == '__main__':
     app.run()
-

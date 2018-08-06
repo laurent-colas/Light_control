@@ -2,11 +2,20 @@
 <title>{% block title %}{% endblock %} </title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-<div class="topnav">
-    <a class="active" href="{{ url_for('divide') }}">Light buttons</a>
-    <a href="{{ url_for('macros') }}">Light macros</a>
-    <a href="{{ url_for('add_macros') }}">Add Light macros</a>
-</div>
+{% set navigation_bar = [
+    ('/', 'button_page', 'All button Index'),
+    ('/macros', 'macros', 'Light macros'),
+    ('/add_macros', 'add_macros', 'Add Light macros')
+] -%}
+
+{% set active_page = active_page|default('button_page') -%}
+
+<ul class="topnav" id="navigation">
+{% for href, id, caption in navigation_bar %}
+      <a class = "{% if id == active_page %} active {% endif %}"
+         href="{{ href|e }}">{{ caption|e }}</a>
+{% endfor %}
+</ul>
 
 <section class="content">
   <header>
