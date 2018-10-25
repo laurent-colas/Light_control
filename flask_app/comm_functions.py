@@ -33,5 +33,8 @@ def send_address(bus, address, targetPins, state):
 
 def simulate_send_address(targetPins, state):
     for i in range(len(targetPins)):
-        print(targetPins[i])
-        print(state)
+        print(targetPins[i] + ' ' + str(state))
+
+def simulate_send_address_brightness(targetPins, brightness, state):
+    for i in range(len(targetPins)):
+        print(targetPins[i] + ' ' + str(brightness) + ' ' + str(state))

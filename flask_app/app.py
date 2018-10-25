@@ -1,5 +1,10 @@
+'''
+This is the application
+'''
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 from flask import Flask, request, render_template
-# from collections import defaultdict
 from flask_wtf import FlaskForm
 
 from wtforms import FloatField, StringField
@@ -7,7 +12,7 @@ from wtforms.validators import DataRequired
 import comm_functions as comm
 import adresse_lib as address_lib
 
-'''
+
 import RPi.GPIO as GPIO
 import smbus
 
@@ -17,9 +22,12 @@ bus = smbus.SMBus(1)
 address = 0x04
 GPIO.setmode(GPIO.BCM)
 
-'''
+
+
+# Todo:
 
 app = Flask(__name__)
+# app.config['TESTING'] = True
 app.config['SECRET_KEY'] = 'you-will-never-guess'
 
 
@@ -27,42 +35,80 @@ app.config['SECRET_KEY'] = 'you-will-never-guess'
 @app.route('/MotionDetector')
 def motion_handler():
     light = request.args.get('light', default='*', type=str)
-    # state = request.args.get('state', default=0, type=int)
+    state = request.args.get('state', default=0, type=int)
 
     target_place = address_lib.motion_detect_address[light]
-    final_target_pins = address_lib.places_name[target_place]
-
-    if final_target_pins[0] == 1:
-        address_lib.places_name[target_place][0] = 0
-    else:
-        address_lib.places_name[target_place][0] = 1
-    comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[target_place][0])
-
-    # comm.send_address(bus, address, targetPins, state)
+    for place in target_place:
+        final_target_pins = address_lib.places_name[place]
+        address_lib.places_name[place][0] = state
+        comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[place][0])
+        comm.send_address(bus, address, final_target_pins[1:], state)
 
     return 'Motion Detected from ESP8266'
+
+    # choices = list(address_lib.motion_detect_address.keys())
+    #
+    # target_place = address_lib.motion_detect_address[light]
+    # final_target_pins = address_lib.places_name[target_place]
+    #
+    # if final_target_pins[0] == 1:
+    #     address_lib.places_name[target_place][0] = 0
+    # else:
+    #     address_lib.places_name[target_place][0] = 1
+    # comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[target_place][0])
+    #
+    # # comm.send_address(bus, address, targetPins, state)
+    #
+    # return 'Motion Detected 3'
 
 
 # http://192.168.0.106/ButtonDetector?light=B1&state=1
 @app.route('/ButtonDetector')
 def button_handler():
     light = request.args.get('light', default='*', type=str)
-    # state = request.args.get('state', default=0, type=int)
+    state = request.args.get('state', default=0, type=int)
 
-    # link between the physical button and relay address
     target_place = address_lib.button_address[light]
-    final_target_pins = address_lib.places_name[target_place]
+    for place in target_place:
+        final_target_pins = address_lib.places_name[place]
+        address_lib.places_name[place][0] = state
+        comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[place][0])
+        comm.send_address(bus, address, final_target_pins[1:], state)
 
-    if final_target_pins[0] == 1:
-        address_lib.places_name[target_place][0] = 0
-    else:
-        address_lib.places_name[target_place][0] = 1
-
-    comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[target_place][0])
-    # targetPins = address_lib.button_address[light]
+    # # link between the physical button and relay address
+    # target_place = address_lib.button_address[light]
+    # final_target_pins = address_lib.places_name[target_place]
     #
-    # comm.send_address(bus, address, targetPins, state)
+    # if final_target_pins[0] == 1:
+    #     address_lib.places_name[target_place][0] = 0
+    # else:
+    #     address_lib.places_name[target_place][0] = 1
+    #
+    # comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[target_place][0])
+    # # targetPins = address_lib.button_address[light]
+    # #
+    # # comm.send_address(bus, address, targetPins, state)
     return 'Button pressed by ESP8266'
+
+# http://192.168.0.106/BrightnessButtonDetector?light=B1&brightness=1&state=1
+@app.route('/BrightnessButtonDetector')
+def bright_button_handler():
+    light = request.args.get('light', default='*', type=str)
+    brightness = request.args.get('brightness', default=6, type=int)
+    state = request.args.get('state', default=0, type=int)
+
+    target_place = address_lib.button_address[light]
+    # target_place = address_lib.places_name_brightness[light]
+    for place in target_place:
+        # final_target_pins = address_lib.places_name[place]
+        final_target_pins = address_lib.places_name_brightness[place]
+        address_lib.places_name_brightness[place][0] = state
+        address_lib.places_name_brightness[place][1] = brightness
+        comm.simulate_send_address_brightness(final_target_pins[2:],
+                                              address_lib.places_name_brightness[place][1],
+                                              address_lib.places_name_brightness[place][0])
+
+    return 'Intensity Button pressed by ESP8266'
 
 
 @app.route('/hello_world')
@@ -119,6 +165,7 @@ def macros():
                 final_target_pins = list_places[list_of_imp_macro[i]][1:]
                 final_state = list_places[list_of_imp_macro[i]][0]
                 comm.simulate_send_address(final_target_pins, final_state)
+                # comm.send_address(bus, address, final_target_pins[1:], final_state)
 
     return render_template('macros_button.html', list_macros=macro_list_name, form=button_form)
 
@@ -143,9 +190,10 @@ def divide():
         final_target_pins = list_places[light_address][1:]
         final_state = list_places[light_address][0]
         comm.simulate_send_address(final_target_pins, final_state)
+        comm.send_address(bus, address, final_state, final_state)
 
     return render_template('button.html', list_places=list_places, form=form)
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0',port=8090)
