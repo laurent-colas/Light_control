@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="pi@192.168.1.106:22">
+  <component name="PublishConfigData" autoUpload="Always">
     <serverData>
-      <paths name="pi@192.168.1.106:22">
+      <paths name="laurent@192.168.1.106:22">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/pi/Documents/Light_control" local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="pi_lumiere">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/Documents/Light_control" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/home/laurent/projet_lumiere" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>

@@ -1,20 +1,35 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+import collections
 
-button_address = {
+
+def initialize_dicts(dicty, list_keys):
+    dictionary = collections.OrderedDict()
+    for key_list in list_keys:
+        dictionary[key_list] = dicty[key_list]
+    return dictionary
+
+
+button_addresses = {
     'B1': ['Entrée près de la porte','Garde-Robe'],
-    'B2': ['Entrée près de la porte','Garde-Robe']
+    'B2': ['Entrée près de la porte','Garde-Robe'],
+    'B3': 'Garde-Robe',
+    'B4': 'Entrée près de la porte',
+    'B5': 'Entrée près de la porte',
+    'B6': 'Entrée près de la porte',
 }
+list_button_addresses = ['B1', 'B2', 'B3', 'B4', 'B5', 'B6']
+button_address = initialize_dicts(button_addresses, list_button_addresses)
 
-motion_detect_address = {
+
+motion_detect_addresses = {
     'D1': ['Entrée près de la porte','Garde-Robe','Salon'],
     'D3': 'Garde-Robe',
     'D2': ['Entrée près de la porte','Salon']
 }
+list_motion_detect_address = ['D1', 'D3', 'D2']
+motion_detect_address = initialize_dicts(motion_detect_addresses, list_motion_detect_address)
 
-
-macros_names = {'All': [0, 'Garde-Robe', 'Entrée près de la porte', 'Entrée vers le salon', 'Corridor face à cuisine',
+macros_nameses = {'All': [0, 'Garde-Robe', 'Entrée près de la porte', 'Entrée vers le salon', 'Corridor face à cuisine',
                         'Corridor face à placard sono', 'Salon', 'Lampe droite', 'Lampe gauche',
                         'Sous le comptoir téléphone', 'Sous le comptoir lavabos', 'Ilôt central', 'Au dessu du lavabo',
                         'A côté du lavabo', 'Côté frigidaire', 'Côté salle à manger', 'Au-dessus de la table',
@@ -29,83 +44,104 @@ macros_names = {'All': [0, 'Garde-Robe', 'Entrée près de la porte', 'Entrée v
                         'Salle principale', 'Salle géothermie', 'Salle sous cuisine', 'Salle hydrogène',
                         'Entrée principale 1', 'Entrée principale 2', 'Entrée près du cabanon',
                         'Entrée près du BBQ', 'Façade arrière', 'Terrain'],
-                'Exemple': [0, 'Garde-Robe', 'Entrée près de la porte', 'Entrée vers le salon'],
-                }
+                'Exemple': [0, 'Garde-Robe', 'Entrée près de la porte', 'Entrée vers le salon']}
+list_macros_names = ['All', 'Exemple']
+macros_names = initialize_dicts(macros_nameses, list_macros_names)
+
+# 'key': [brightness(int), places(int), places(int), ... ],
 places_name_brightness = {
-    'Garde-Robe': [0, 6, 'A01'],
-    'Entrée près de la porte': [0, 6, 'A02'],
-    'Entrée vers le salon': [0, 6, 'A03'],
-    'Corridor face à cuisine': [0, 6, 'A04'],
+    'Garde-Robe': [0, 1, 3],
+    'Entrée près de la porte': [0, 2],
+    'Entrée vers le salon': [0, 3],
+    'Corridor face à cuisine': [0, 4],
 }
 
-places_name = {
-    'Garde-Robe': [0, 'A01'],
-    'Entrée près de la porte': [0, 'A02'],
-    'Entrée vers le salon': [0, 'A03'],
-    'Corridor face à cuisine': [0, 'A04'],
-    'Corridor face à placard sono': [0, 'A05'],
-    'Salon': [0, 'A06'],
-    'Lampe droite': [0, 'A07'],
-    'Lampe gauche': [0, 'A08'],
-    'Sous le comptoir téléphone': [0, 'A09'],
-    'Sous le comptoir lavabos': [0, 'A10'],
-    'Ilôt central': [0, 'A11'],
-    'Au dessu du lavabo': [0, 'A12'],
-    'A côté du lavabo': [0, 'A13'],
-    'Côté frigidaire': [0, 'A14'],
-    'Côté salle à manger': [0, 'A15'],
-    'Au-dessus de la table': [0, 'A16'],
-    'Près de la fenêtre': [0, 'A01'],
-    'Fond': [0, 'A01'],
-    'Lavabo': [0, 'A01'],
-    'Corridor statue': [0, 'A01'],
-    'Corridor salle de bain': [0, 'A01'],
-    'Murale bibliothèque vers sous-sol': [0, 'A01'],
-    'Corridor bibliothèque vers sous-sol': [0, 'A01'],
-    'Placard sono': [0, 'A01'],
-    'Au-dessus de la TV': [0, 'A01'],
-    'Au centre': [0, 'A01'],
-    'Au-dessus du lit 1': [0, 'A01'],
-    'Grand garde-robe': [0, 'A01'],
-    'Petit garde-robe': [0, 'A01'],
-    'Marches 1': [0, 'A01'],
-    'Marches 2': [0, 'A01'],
-    'Au-dessus du lit': [0, 'A01'],
-    'Au-dessus du bureau': [0, 'A01'],
-    'Garde-Robe 1': [0, 'A01'],
-    'Entrée': [0, 'A01'],
-    'Garde-Robe 2': [0, 'A01'],
-    'Garde-Linge 3': [0, 'A01'],
-    'Plafond 1': [0, 'A01'],
-    'Comptoir 1': [0, 'A01'],
-    'Statue': [0, 'A01'],
-    'Mural Entrée chambre': [0, 'A01'],
-    'Douche': [0, 'A01'],
-    'Toilette': [0, 'A01'],
-    'Comptoir': [0, 'A01'],
-    'Face à la fenêtre': [0, 'A01'],
-    'Au-dessus du lit 2': [0, 'A01'],
-    'Prises près du lit': [0, 'A01'],
-    'Garde-Robe 3': [0, 'A01'],
-    'Garde-Linge': [0, 'A01'],
-    'Marches': [0, 'A01'],
-    'Plafond': [0, 'A01'],
-    'Centre': [0, 'A01'],
-    'Près du mur': [0, 'A01'],
-    'Encastrés': [0, 'A01'],
-    'Près du panneau électrique': [0, 'A01'],
-    'Salle du frigidaire': [0, 'A01'],
-    'Salle principale': [0, 'A01'],
-    'Salle géothermie': [0, 'A01'],
-    'Salle sous cuisine': [0, 'A01'],
-    'Salle hydrogène': [0, 'A01'],
-    'Entrée principale 1': [0, 'A01'],
-    'Entrée principale 2': [0, 'A01'],
-    'Entrée près du cabanon': [0, 'A01'],
-    'Entrée près du BBQ': [0, 'A01'],
-    'Façade arrière': [0, 'A01'],
-    'Terrain': [0, 'A01'],
+places_name_brightness = collections.OrderedDict(places_name_brightness)
+
+
+places_names = {
+    'Garde-Robe': [0, 1],
+    'Entrée près de la porte': [0, 2],
+    'Entrée vers le salon': [0, 3],
+    'Corridor face à cuisine': [0, 4],
+    'Corridor face à placard sono': [0, 5],
+    'Salon': [0, 6],
+    'Lampe droite': [0, 7],
+    'Lampe gauche': [0, 8],
+    'Sous le comptoir téléphone': [0, 9],
+    'Sous le comptoir lavabos': [0, 10],
+    'Ilôt central': [0, 11],
+    'Au dessu du lavabo': [0, 12],
+    'A côté du lavabo': [0, 13],
+    'Côté frigidaire': [0, 14],
+    'Côté salle à manger': [0, 15],
+    'Au-dessus de la table': [0, 16],
+    'Près de la fenêtre': [0, 17],
+    'Fond': [0, 18],
+    'Lavabo': [0, 19],
+    'Corridor statue': [0, 20],
+    'Corridor salle de bain': [0, 21],
+    'Murale bibliothèque vers sous-sol': [0, 22],
+    'Corridor bibliothèque vers sous-sol': [0, 23],
+    'Placard sono': [0, 24],
+    'Au-dessus de la TV': [0, 25],
+    'Au centre': [0, 26],
+    'Au-dessus du lit 1': [0, 27],
+    'Grand garde-robe': [0, 28],
+    'Petit garde-robe': [0, 29],
+    'Marches 1': [0, 30],
+    'Marches 2': [0, 31],
+    'Au-dessus du lit': [0, 32],
+    'Au-dessus du bureau': [0, 33],
+    'Garde-Robe 1': [0, 34],
+    'Entrée': [0, 35],
+    'Garde-Robe 2': [0, 36],
+    'Garde-Linge 3': [0, 37],
+    'Plafond 1': [0, 38],
+    'Comptoir 1': [0, 39],
+    'Statue': [0, 40],
+    'Mural Entrée chambre': [0, 41],
+    'Douche': [0, 42],
+    'Toilette': [0, 43],
+    'Comptoir': [0, 44],
+    'Face à la fenêtre': [0, 45],
+    'Au-dessus du lit 2': [0, 46],
+    'Prises près du lit': [0, 47],
+    'Garde-Robe 3': [0, 48],
+    'Garde-Linge': [0, 49],
+    'Marches': [0, 50],
+    'Plafond': [0, 51],
+    'Centre': [0, 52],
+    'Près du mur': [0, 53],
+    'Encastrés': [0, 54],
+    'Près du panneau électrique': [0, 55],
+    'Salle du frigidaire': [0, 56],
+    'Salle principale': [0, 57],
+    'Salle géothermie': [0, 58],
+    'Salle sous cuisine': [0, 59],
+    'Salle hydrogène': [0, 60],
+    'Entrée principale 1': [0, 61],
+    'Entrée principale 2': [0, 62],
+    'Entrée près du cabanon': [0, 63],
+    'Entrée près du BBQ': [0, 64],
+    'Façade arrière': [0, 65],
+    'Terrain': [0, 66],
 }
+list_places_name = ['Garde-Robe', 'Entrée près de la porte', 'Entrée vers le salon', 'Corridor face à cuisine',
+                    'Corridor face à placard sono', 'Salon', 'Lampe droite', 'Lampe gauche', 'Sous le comptoir téléphone',
+                    'Sous le comptoir lavabos', 'Ilôt central', 'Au dessu du lavabo', 'A côté du lavabo', 'Côté frigidaire',
+                    'Côté salle à manger', 'Au-dessus de la table', 'Près de la fenêtre', 'Fond', 'Lavabo', 'Corridor statue',
+                    'Corridor salle de bain', 'Murale bibliothèque vers sous-sol', 'Corridor bibliothèque vers sous-sol',
+                    'Placard sono', 'Au-dessus de la TV', 'Au centre', 'Au-dessus du lit 1', 'Grand garde-robe',
+                    'Petit garde-robe', 'Marches 1', 'Marches 2', 'Au-dessus du lit', 'Au-dessus du bureau', 'Garde-Robe 1',
+                    'Entrée', 'Garde-Robe 2', 'Garde-Linge 3', 'Plafond 1', 'Comptoir 1', 'Statue', 'Mural Entrée chambre',
+                    'Douche', 'Toilette', 'Comptoir', 'Face à la fenêtre', 'Au-dessus du lit 2', 'Prises près du lit',
+                    'Garde-Robe 3', 'Garde-Linge', 'Marches', 'Plafond', 'Centre', 'Près du mur', 'Encastrés',
+                    'Près du panneau électrique', 'Salle du frigidaire', 'Salle principale', 'Salle géothermie',
+                    'Salle sous cuisine', 'Salle hydrogène', 'Entrée principale 1', 'Entrée principale 2',
+                    'Entrée près du cabanon', 'Entrée près du BBQ', 'Façade arrière', 'Terrain']
+places_name = initialize_dicts(places_names, list_places_name)
+
 
 button_all_addresses = {
     "B1",

@@ -5,7 +5,7 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Pi Lumiere" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Remote Python 3.5.3 (sftp://laurent@192.168.1.106:22/home/laurent/projet_lumiere/projetlumiereenv/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">

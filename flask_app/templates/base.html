@@ -1,9 +1,17 @@
 <!doctype html>
-<title>{% block title %}{% endblock %} </title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>
+    {% block title %}{% endblock %}
+</title>
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% endblock %}
+</head>
+
 
 {% set navigation_bar = [
     ('/', 'button_page', 'All button Index'),
+    ('/brightness', 'brightness_button_page', 'All brightness button Index'),
     ('/macros', 'macros', 'Light macros'),
     ('/add_macros', 'add_macros', 'Add Light macros')
 ] -%}
@@ -18,13 +26,13 @@
 </ul>
 
 <section class="content">
-  <header>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta charset="UTF-8">
-      {% block header %}{% endblock %}
-  </header>
+    <header>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block header %}{% endblock %}
+    </header>
   {% for message in get_flashed_messages() %}
-    <div class="flash">{{ message }}</div>
+        <div class="flash">{{ message }}</div>
   {% endfor %}
+
   {% block content %}{% endblock %}
 </section>

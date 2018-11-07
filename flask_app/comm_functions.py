@@ -33,8 +33,18 @@ def send_address(bus, address, targetPins, state):
 
 def simulate_send_address(targetPins, state):
     for i in range(len(targetPins)):
-        print(targetPins[i] + ' ' + str(state))
+        print(str(targetPins[i]) + ' ' + str(state))
 
-def simulate_send_address_brightness(targetPins, brightness, state):
-    for i in range(len(targetPins)):
-        print(targetPins[i] + ' ' + str(brightness) + ' ' + str(state))
+
+def simulate_send_address_brightness(target_pins, brightness):
+    for targetPin in target_pins:
+        print('Standard: ' + str(targetPin) + ' ' + str(brightness))
+
+
+def send_address_brightness(pwm, target_pins, brightness):
+    pwm_brightness_off = int((int(brightness) / 100) * 4095)
+    # print(pwm_brightness_off)
+    print('target Pins:' + str(target_pins))
+    for targetPin in target_pins:
+        print('Brightness: ' + str(targetPin) + ' ' + str(brightness))
+        pwm.set_pwm(targetPin, 0, pwm_brightness_off)
