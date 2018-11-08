@@ -1,0 +1,40 @@
+Importer Log Report
+Project : Adafruit HUZZAH32 ESP32 Feather.PrjPcb
+
+Section : Analyze Document - C:\Users\laure\Documents\Light_control\CAD_documentation\Buttons_with_Brightness\Microcontroller\Adafruit-HUZZAH32-ESP32-Feather-PCB-master\Adafruit HUZZAH32 ESP32 Feather.brd
+    Analyzing data of C:\Users\laure\Documents\Light_control\CAD_documentation\Buttons_with_Brightness\Microcontroller\Adafruit-HUZZAH32-ESP32-Feather-PCB-master\Adafruit HUZZAH32 ESP32 Feather.brd
+    Load settings
+    Load layers 143
+    Load Library "microbuilder"
+    Load Packages 20
+    Load Library "SparkFun"
+    Load Packages 1
+    Load Library "silks"
+    Load Packages 2
+    ERROR: Unhandled typeerrors
+EndSection
+
+Section : Analyze Document - C:\Users\laure\Documents\Light_control\CAD_documentation\Buttons_with_Brightness\Microcontroller\Adafruit-HUZZAH32-ESP32-Feather-PCB-master\Adafruit HUZZAH32 ESP32 Feather.sch
+    Analyzing data of C:\Users\laure\Documents\Light_control\CAD_documentation\Buttons_with_Brightness\Microcontroller\Adafruit-HUZZAH32-ESP32-Feather-PCB-master\Adafruit HUZZAH32 ESP32 Feather.sch
+    Load settings
+    Load layers 143
+    Load schematic
+    Load Libraries 3
+    Load Library "microbuilder"
+    Load Packages 78
+    Load Symbols 23
+    Load DeviceSets 22
+    Load Library "supply1"
+    Load Packages 0
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Library "SparkFun"
+    Load Packages 6
+    Load Symbols 1
+    Load DeviceSets 1
+    Load Attributes 3
+    Load Classes 1
+    Load Parts 69
+    Load Sheets 1
+    ERROR: Unhandled typeerrors
+EndSection
