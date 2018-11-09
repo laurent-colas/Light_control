@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=3.3V Pin=RP1-1
+Removed Pin From Net: NetName=A5 Pin=RP1-2
+Removed Pin From Net: NetName=GND Pin=RP1-3
+Removed Member From Class: ClassName=button_brightness_esp32 Member=RP1
+Added Room: Name=button_brightness_esp32

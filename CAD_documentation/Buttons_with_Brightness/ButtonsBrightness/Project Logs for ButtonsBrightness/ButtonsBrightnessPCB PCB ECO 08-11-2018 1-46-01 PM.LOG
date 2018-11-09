@@ -1,0 +1,453 @@
+Added Component: Designator=B1(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B2(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B3(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B4(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B5(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B6(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B7(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B8(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B9(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B10(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B11(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B12(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B13(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B14(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B15(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=B16(Button_D6R90)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P1(CONN_6)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P2(CONN_4)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P3(CONN_3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P4(CONN_7)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P5(CONN_7)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P6(CONN_3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R2(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R3(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R4(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R5(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R6(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R7(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R8(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R9(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R10(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R11(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R12(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R13(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R14(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R15(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R16(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R17(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R18(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R19(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R20(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R21(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R22(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R23(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R24(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R25(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=R26(RES_0804_panasonic)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6GEYJ471V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Panasonic"; VariantName = "[No Variations]"
+Added Component: Designator=RP1(POT_PTA2043)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Built_By"; Value = "EMA_UL_Team"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "C"; Value = "Copyright (C) 2015 Accelerated Designs. All rights reserved"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "PTA2043-2015DPB103"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RefDes"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Value"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = "Bourns Electronics"; VariantName = "[No Variations]"
+Added Component: Designator=U1(ESP32_feather)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=3.3V Pin=P1-4
+Added Pin To Net: NetName=3.3V Pin=R1-2
+Added Pin To Net: NetName=3.3V Pin=R7-2
+Added Pin To Net: NetName=3.3V Pin=R13-2
+Added Pin To Net: NetName=3.3V Pin=R19-2
+Added Pin To Net: NetName=3.3V Pin=R25-1
+Added Pin To Net: NetName=3.3V Pin=R26-1
+Added Pin To Net: NetName=3.3V Pin=RP1-1
+Added Pin To Net: NetName=3.3V Pin=U1-14
+Added Net: Name=3.3V
+Added Pin To Net: NetName=A0 Pin=P4-1
+Added Pin To Net: NetName=A0 Pin=U1-17
+Added Net: Name=A0
+Added Pin To Net: NetName=A1 Pin=B1-3
+Added Pin To Net: NetName=A1 Pin=B1-4
+Added Pin To Net: NetName=A1 Pin=B2-3
+Added Pin To Net: NetName=A1 Pin=B2-4
+Added Pin To Net: NetName=A1 Pin=B3-3
+Added Pin To Net: NetName=A1 Pin=B3-4
+Added Pin To Net: NetName=A1 Pin=B4-3
+Added Pin To Net: NetName=A1 Pin=B4-4
+Added Pin To Net: NetName=A1 Pin=P4-2
+Added Pin To Net: NetName=A1 Pin=R6-1
+Added Pin To Net: NetName=A1 Pin=U1-18
+Added Net: Name=A1
+Added Pin To Net: NetName=A2 Pin=B5-3
+Added Pin To Net: NetName=A2 Pin=B5-4
+Added Pin To Net: NetName=A2 Pin=B6-3
+Added Pin To Net: NetName=A2 Pin=B6-4
+Added Pin To Net: NetName=A2 Pin=B7-3
+Added Pin To Net: NetName=A2 Pin=B7-4
+Added Pin To Net: NetName=A2 Pin=B8-3
+Added Pin To Net: NetName=A2 Pin=B8-4
+Added Pin To Net: NetName=A2 Pin=P4-3
+Added Pin To Net: NetName=A2 Pin=R12-1
+Added Pin To Net: NetName=A2 Pin=U1-19
+Added Net: Name=A2
+Added Pin To Net: NetName=A3 Pin=B9-3
+Added Pin To Net: NetName=A3 Pin=B9-4
+Added Pin To Net: NetName=A3 Pin=B10-3
+Added Pin To Net: NetName=A3 Pin=B11-3
+Added Pin To Net: NetName=A3 Pin=B11-4
+Added Pin To Net: NetName=A3 Pin=B12-3
+Added Pin To Net: NetName=A3 Pin=B12-4
+Added Pin To Net: NetName=A3 Pin=P4-4
+Added Pin To Net: NetName=A3 Pin=R18-1
+Added Pin To Net: NetName=A3 Pin=U1-20
+Added Net: Name=A3
+Added Pin To Net: NetName=A4 Pin=B13-3
+Added Pin To Net: NetName=A4 Pin=B13-4
+Added Pin To Net: NetName=A4 Pin=B14-3
+Added Pin To Net: NetName=A4 Pin=B14-4
+Added Pin To Net: NetName=A4 Pin=B15-3
+Added Pin To Net: NetName=A4 Pin=B15-4
+Added Pin To Net: NetName=A4 Pin=B16-3
+Added Pin To Net: NetName=A4 Pin=B16-4
+Added Pin To Net: NetName=A4 Pin=P4-5
+Added Pin To Net: NetName=A4 Pin=R24-1
+Added Pin To Net: NetName=A4 Pin=U1-21
+Added Net: Name=A4
+Added Pin To Net: NetName=A5 Pin=P4-6
+Added Pin To Net: NetName=A5 Pin=RP1-2
+Added Pin To Net: NetName=A5 Pin=U1-22
+Added Net: Name=A5
+Added Pin To Net: NetName=BAT Pin=P1-2
+Added Pin To Net: NetName=BAT Pin=U1-1
+Added Net: Name=BAT
+Added Pin To Net: NetName=EN Pin=P1-3
+Added Pin To Net: NetName=EN Pin=U1-2
+Added Net: Name=EN
+Added Pin To Net: NetName=GND Pin=P1-6
+Added Pin To Net: NetName=GND Pin=P2-4
+Added Pin To Net: NetName=GND Pin=P3-3
+Added Pin To Net: NetName=GND Pin=P6-3
+Added Pin To Net: NetName=GND Pin=R6-2
+Added Pin To Net: NetName=GND Pin=R12-2
+Added Pin To Net: NetName=GND Pin=R18-2
+Added Pin To Net: NetName=GND Pin=R24-2
+Added Pin To Net: NetName=GND Pin=RP1-3
+Added Pin To Net: NetName=GND Pin=U1-16
+Added Net: Name=GND
+Added Pin To Net: NetName=IO12 Pin=P5-2
+Added Pin To Net: NetName=IO12 Pin=U1-5
+Added Net: Name=IO12
+Added Pin To Net: NetName=IO13 Pin=P5-1
+Added Pin To Net: NetName=IO13 Pin=U1-4
+Added Net: Name=IO13
+Added Pin To Net: NetName=IO14 Pin=P5-7
+Added Pin To Net: NetName=IO14 Pin=U1-10
+Added Net: Name=IO14
+Added Pin To Net: NetName=IO15 Pin=P5-5
+Added Pin To Net: NetName=IO15 Pin=U1-8
+Added Net: Name=IO15
+Added Pin To Net: NetName=IO21 Pin=P4-7
+Added Pin To Net: NetName=IO21 Pin=U1-28
+Added Net: Name=IO21
+Added Pin To Net: NetName=IO27 Pin=P5-3
+Added Pin To Net: NetName=IO27 Pin=U1-6
+Added Net: Name=IO27
+Added Pin To Net: NetName=IO32 Pin=P5-6
+Added Pin To Net: NetName=IO32 Pin=U1-9
+Added Net: Name=IO32
+Added Pin To Net: NetName=IO33 Pin=P5-4
+Added Pin To Net: NetName=IO33 Pin=U1-7
+Added Net: Name=IO33
+Added Pin To Net: NetName=MISO Pin=P2-3
+Added Pin To Net: NetName=MISO Pin=U1-25
+Added Net: Name=MISO
+Added Pin To Net: NetName=MOSI Pin=P2-2
+Added Pin To Net: NetName=MOSI Pin=U1-24
+Added Net: Name=MOSI
+Added Pin To Net: NetName=NetB1_1 Pin=B1-1
+Added Pin To Net: NetName=NetB1_1 Pin=B1-2
+Added Pin To Net: NetName=NetB1_1 Pin=R5-2
+Added Net: Name=NetB1_1
+Added Pin To Net: NetName=NetB2_1 Pin=B2-1
+Added Pin To Net: NetName=NetB2_1 Pin=B2-2
+Added Pin To Net: NetName=NetB2_1 Pin=R4-2
+Added Pin To Net: NetName=NetB2_1 Pin=R5-1
+Added Net: Name=NetB2_1
+Added Pin To Net: NetName=NetB3_1 Pin=B3-1
+Added Pin To Net: NetName=NetB3_1 Pin=B3-2
+Added Pin To Net: NetName=NetB3_1 Pin=R3-2
+Added Pin To Net: NetName=NetB3_1 Pin=R4-1
+Added Net: Name=NetB3_1
+Added Pin To Net: NetName=NetB4_1 Pin=B4-1
+Added Pin To Net: NetName=NetB4_1 Pin=B4-2
+Added Pin To Net: NetName=NetB4_1 Pin=R2-1
+Added Pin To Net: NetName=NetB4_1 Pin=R3-1
+Added Net: Name=NetB4_1
+Added Pin To Net: NetName=NetB5_1 Pin=B5-1
+Added Pin To Net: NetName=NetB5_1 Pin=B5-2
+Added Pin To Net: NetName=NetB5_1 Pin=R11-2
+Added Net: Name=NetB5_1
+Added Pin To Net: NetName=NetB6_1 Pin=B6-1
+Added Pin To Net: NetName=NetB6_1 Pin=B6-2
+Added Pin To Net: NetName=NetB6_1 Pin=R10-2
+Added Pin To Net: NetName=NetB6_1 Pin=R11-1
+Added Net: Name=NetB6_1
+Added Pin To Net: NetName=NetB7_1 Pin=B7-1
+Added Pin To Net: NetName=NetB7_1 Pin=B7-2
+Added Pin To Net: NetName=NetB7_1 Pin=R9-2
+Added Pin To Net: NetName=NetB7_1 Pin=R10-1
+Added Net: Name=NetB7_1
+Added Pin To Net: NetName=NetB8_1 Pin=B8-1
+Added Pin To Net: NetName=NetB8_1 Pin=B8-2
+Added Pin To Net: NetName=NetB8_1 Pin=R8-1
+Added Pin To Net: NetName=NetB8_1 Pin=R9-1
+Added Net: Name=NetB8_1
+Added Pin To Net: NetName=NetB9_1 Pin=B9-1
+Added Pin To Net: NetName=NetB9_1 Pin=B9-2
+Added Pin To Net: NetName=NetB9_1 Pin=R17-2
+Added Net: Name=NetB9_1
+Added Pin To Net: NetName=NetB10_1 Pin=B10-1
+Added Pin To Net: NetName=NetB10_1 Pin=B10-2
+Added Pin To Net: NetName=NetB10_1 Pin=R16-2
+Added Pin To Net: NetName=NetB10_1 Pin=R17-1
+Added Net: Name=NetB10_1
+Added Pin To Net: NetName=NetB11_1 Pin=B11-1
+Added Pin To Net: NetName=NetB11_1 Pin=B11-2
+Added Pin To Net: NetName=NetB11_1 Pin=R15-2
+Added Pin To Net: NetName=NetB11_1 Pin=R16-1
+Added Net: Name=NetB11_1
+Added Pin To Net: NetName=NetB12_1 Pin=B12-1
+Added Pin To Net: NetName=NetB12_1 Pin=B12-2
+Added Pin To Net: NetName=NetB12_1 Pin=R14-1
+Added Pin To Net: NetName=NetB12_1 Pin=R15-1
+Added Net: Name=NetB12_1
+Added Pin To Net: NetName=NetB13_1 Pin=B13-1
+Added Pin To Net: NetName=NetB13_1 Pin=B13-2
+Added Pin To Net: NetName=NetB13_1 Pin=R23-2
+Added Net: Name=NetB13_1
+Added Pin To Net: NetName=NetB14_1 Pin=B14-1
+Added Pin To Net: NetName=NetB14_1 Pin=B14-2
+Added Pin To Net: NetName=NetB14_1 Pin=R22-2
+Added Pin To Net: NetName=NetB14_1 Pin=R23-1
+Added Net: Name=NetB14_1
+Added Pin To Net: NetName=NetB15_1 Pin=B15-1
+Added Pin To Net: NetName=NetB15_1 Pin=B15-2
+Added Pin To Net: NetName=NetB15_1 Pin=R21-2
+Added Pin To Net: NetName=NetB15_1 Pin=R22-1
+Added Net: Name=NetB15_1
+Added Pin To Net: NetName=NetB16_1 Pin=B16-1
+Added Pin To Net: NetName=NetB16_1 Pin=B16-2
+Added Pin To Net: NetName=NetB16_1 Pin=R20-1
+Added Pin To Net: NetName=NetB16_1 Pin=R21-1
+Added Net: Name=NetB16_1
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=R2-2
+Added Net: Name=NetR1_1
+Added Pin To Net: NetName=NetR7_1 Pin=R7-1
+Added Pin To Net: NetName=NetR7_1 Pin=R8-2
+Added Net: Name=NetR7_1
+Added Pin To Net: NetName=NetR13_1 Pin=R13-1
+Added Pin To Net: NetName=NetR13_1 Pin=R14-2
+Added Net: Name=NetR13_1
+Added Pin To Net: NetName=NetR19_1 Pin=R19-1
+Added Pin To Net: NetName=NetR19_1 Pin=R20-2
+Added Net: Name=NetR19_1
+Added Pin To Net: NetName=RST Pin=P1-5
+Added Pin To Net: NetName=RST Pin=U1-13
+Added Net: Name=RST
+Added Pin To Net: NetName=RX Pin=P6-1
+Added Pin To Net: NetName=RX Pin=U1-26
+Added Net: Name=RX
+Added Pin To Net: NetName=SCK Pin=P2-1
+Added Pin To Net: NetName=SCK Pin=U1-23
+Added Net: Name=SCK
+Added Pin To Net: NetName=SCL Pin=P3-1
+Added Pin To Net: NetName=SCL Pin=R25-2
+Added Pin To Net: NetName=SCL Pin=U1-11
+Added Net: Name=SCL
+Added Pin To Net: NetName=SDA Pin=P3-2
+Added Pin To Net: NetName=SDA Pin=R26-2
+Added Pin To Net: NetName=SDA Pin=U1-12
+Added Net: Name=SDA
+Added Pin To Net: NetName=TX Pin=P6-2
+Added Pin To Net: NetName=TX Pin=U1-27
+Added Net: Name=TX
+Added Pin To Net: NetName=USB Pin=P1-1
+Added Pin To Net: NetName=USB Pin=U1-3
+Added Net: Name=USB
+Added Class: Name=button_brightness_esp32
+Added Room: Name=button_brightness_esp32
