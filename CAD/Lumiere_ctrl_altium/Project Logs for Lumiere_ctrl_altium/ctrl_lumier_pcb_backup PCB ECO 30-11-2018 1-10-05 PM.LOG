@@ -1,0 +1,25 @@
+Removed Pin From Net: NetName=LED+1 Pin=P1-1
+Removed Pin From Net: NetName=LED-1 Pin=P1-2
+Removed Pin From Net: NetName=LED+2 Pin=P1-3
+Removed Pin From Net: NetName=LED-2 Pin=P1-4
+Removed Pin From Net: NetName=LED+3 Pin=P1-5
+Removed Pin From Net: NetName=LED-3 Pin=P1-6
+Removed Pin From Net: NetName=LED+4 Pin=P1-7
+Removed Pin From Net: NetName=LED-4 Pin=P1-8
+Removed Pin From Net: NetName=LED+5 Pin=P1-9
+Removed Pin From Net: NetName=LED-5 Pin=P1-10
+Removed Pin From Net: NetName=LED+6 Pin=P1-11
+Removed Pin From Net: NetName=LED-6 Pin=P1-12
+Added Pin To Net: NetName=LED-1 Pin=P1-1
+Added Pin To Net: NetName=LED+1 Pin=P1-2
+Added Pin To Net: NetName=LED-2 Pin=P1-3
+Added Pin To Net: NetName=LED+2 Pin=P1-4
+Added Pin To Net: NetName=LED-3 Pin=P1-5
+Added Pin To Net: NetName=LED+3 Pin=P1-6
+Added Pin To Net: NetName=LED-4 Pin=P1-7
+Added Pin To Net: NetName=LED+4 Pin=P1-8
+Added Pin To Net: NetName=LED-5 Pin=P1-9
+Added Pin To Net: NetName=LED+5 Pin=P1-10
+Added Pin To Net: NetName=LED-6 Pin=P1-11
+Added Pin To Net: NetName=LED+6 Pin=P1-12
+Added Room: Name=lumiere_ctrl_shematic

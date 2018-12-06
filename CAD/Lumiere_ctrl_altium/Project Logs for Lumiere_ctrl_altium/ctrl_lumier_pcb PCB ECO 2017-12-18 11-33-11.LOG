@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=VDD Pin=P3-1
+Added Pin To Net: NetName=MOSI Pin=P3-2
+Added Pin To Net: NetName=CLK Pin=P3-3
+Added Pin To Net: NetName=CS Pin=P3-4
+Added Pin To Net: NetName=Gnd Pin=P3-5
+Added Room: Name=lumiere_ctrl_shematic

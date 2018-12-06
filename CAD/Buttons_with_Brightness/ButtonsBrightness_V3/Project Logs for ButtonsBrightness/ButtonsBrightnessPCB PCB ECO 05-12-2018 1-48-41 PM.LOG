@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=3.3V Pin=PT1-1
+Removed Pin From Net: NetName=GND Pin=PT1-3
+Added Pin To Net: NetName=GND Pin=PT1-1
+Added Pin To Net: NetName=3.3V Pin=PT1-3
+Added Room: Name=button_brightness_esp32

@@ -1,0 +1,40 @@
+Added Component: Designator=P7(ESP32_feather_short_pins)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P8(ESP32_feather_long_pins)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=BAT Pin=P7-1
+Added Pin To Net: NetName=EN Pin=P7-2
+Added Pin To Net: NetName=USB Pin=P7-3
+Added Pin To Net: NetName=IO13 Pin=P7-4
+Added Pin To Net: NetName=IO12 Pin=P7-5
+Added Pin To Net: NetName=IO27 Pin=P7-6
+Added Pin To Net: NetName=IO33 Pin=P7-7
+Added Pin To Net: NetName=IO15 Pin=P7-8
+Added Pin To Net: NetName=IO32 Pin=P7-9
+Added Pin To Net: NetName=IO14 Pin=P7-10
+Added Pin To Net: NetName=SCL Pin=P7-11
+Added Pin To Net: NetName=SDA Pin=P7-12
+Added Pin To Net: NetName=RST Pin=P8-1
+Added Pin To Net: NetName=3.3V Pin=P8-2
+Added Pin To Net: NetName=GND Pin=P8-4
+Added Pin To Net: NetName=A0 Pin=P8-5
+Added Pin To Net: NetName=A1 Pin=P8-6
+Added Pin To Net: NetName=A2 Pin=P8-7
+Added Pin To Net: NetName=A3 Pin=P8-8
+Added Pin To Net: NetName=A4 Pin=P8-9
+Added Pin To Net: NetName=A5 Pin=P8-10
+Added Pin To Net: NetName=SCK Pin=P8-11
+Added Pin To Net: NetName=MOSI Pin=P8-12
+Added Pin To Net: NetName=MISO Pin=P8-13
+Added Pin To Net: NetName=RX Pin=P8-14
+Added Pin To Net: NetName=TX Pin=P8-15
+Added Pin To Net: NetName=IO21 Pin=P8-16
+Added Member To Class: ClassName=button_brightness_esp32 Member=Component P7 Header 12
+Added Member To Class: ClassName=button_brightness_esp32 Member=Component P8 Header 16
+Added Room: Name=button_brightness_esp32

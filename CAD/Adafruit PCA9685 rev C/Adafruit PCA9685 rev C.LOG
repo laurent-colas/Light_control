@@ -1,0 +1,33 @@
+Importer Log Report
+Project : Adafruit PCA9685 rev C.PrjPcb
+
+Section : Analyze Document - C:\Users\lcolas\Downloads\Adafruit-16-Channel-PWM-Servo-Driver-PCB-master\Adafruit-16-Channel-PWM-Servo-Driver-PCB-master\Adafruit PCA9685 rev C.brd
+    Analyzing data of C:\Users\lcolas\Downloads\Adafruit-16-Channel-PWM-Servo-Driver-PCB-master\Adafruit-16-Channel-PWM-Servo-Driver-PCB-master\Adafruit PCA9685 rev C.brd
+    Load settings
+    Load layers 126
+    Load Library "microbuilder"
+    Load Packages 14
+    Load Library "adafruit"
+    Load Packages 2
+EndSection
+
+Section : Analyze Document - C:\Users\lcolas\Downloads\Adafruit-16-Channel-PWM-Servo-Driver-PCB-master\Adafruit-16-Channel-PWM-Servo-Driver-PCB-master\Adafruit PCA9685 rev C.sch
+    Analyzing data of C:\Users\lcolas\Downloads\Adafruit-16-Channel-PWM-Servo-Driver-PCB-master\Adafruit-16-Channel-PWM-Servo-Driver-PCB-master\Adafruit PCA9685 rev C.sch
+    Load settings
+    Load layers 126
+    Load schematic
+    Load Libraries 2
+    Load Library "microbuilder"
+    Load Packages 56
+    Load Symbols 15
+    Load DeviceSets 16
+    Load Library "adafruit"
+    Load Packages 137
+    Load Symbols 2
+    Load DeviceSets 2
+    Load Attributes 0
+    Load Classes 1
+    Load Parts 91
+    Load Sheets 1
+    ERROR: Unhandled typeerrors
+EndSection

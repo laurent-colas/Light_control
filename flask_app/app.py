@@ -12,17 +12,17 @@ import adresse_lib as address_lib
 import threading
 import Adafruit_PCA9685
 
-'''
+
 import RPi.GPIO as GPIO
 import smbus
 
 bus = smbus.SMBus(1)
 # This is the address we setup in the Arduino Program
 # Slave Address 1
-address = 0x04
+address = 0x05
 GPIO.setmode(GPIO.BCM)
 
-'''
+
 
 app = Flask(__name__)
 app.config['TESTING'] = True
@@ -32,7 +32,7 @@ app.config['SECRET_KEY'] = 'you-will-never-guess'
 # with app.app_context():
 #     init_macro_csv()
 
-pwm = Adafruit_PCA9685.PCA9685(0x40)
+pwm = Adafruit_PCA9685.PCA9685()
 pwm_freq = 500
 pwm.set_pwm_freq(pwm_freq)
 
@@ -54,6 +54,29 @@ pwm.set_pwm_freq(pwm_freq)
 #     thread.start()
 
 
+# # http://192.168.0.106/MotionDetector?light=D1&state=1
+# @app.route('/MotionDetector')
+# def motion_handler():
+#     light = request.args.get('light', default='*', type=str)
+#     state = request.args.get('state', default=0, type=int)
+#
+#     target_place = address_lib.motion_detect_address[light]
+#
+#     if type(target_place) is list:
+#         for place in target_place:
+#             final_target_pins = address_lib.places_name[place]
+#             address_lib.places_name[place][0] = state
+#             comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[place][0])
+#             comm.send_address_brightness(pwm, final_target_pins[1:], address_lib.places_name[place][0])
+#     else:
+#         final_target_pins = address_lib.places_name[target_place]
+#         address_lib.places_name[target_place][0] = state
+#         comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[target_place][0])
+#         comm.send_address_brightness(pwm, final_target_pins[1:], address_lib.places_name[target_place][0])
+#
+#     return 'Motion Detected from ESP8266'
+
+
 # http://192.168.0.106/MotionDetector?light=D1&state=1
 @app.route('/MotionDetector')
 def motion_handler():
@@ -66,15 +89,41 @@ def motion_handler():
         for place in target_place:
             final_target_pins = address_lib.places_name[place]
             address_lib.places_name[place][0] = state
-            comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[place][0])
-            comm.send_address_brightness(pwm, final_target_pins[1:], address_lib.places_name[place][0])
+            comm.simulate_send_address_brightness(final_target_pins[1:], address_lib.places_name[place][0])
+            comm.send_mixed_address_brightness(bus, address, pwm, final_target_pins[1:], address_lib.places_name[place][0])
     else:
         final_target_pins = address_lib.places_name[target_place]
         address_lib.places_name[target_place][0] = state
-        comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[target_place][0])
-        comm.send_address_brightness(pwm, final_target_pins[1:], address_lib.places_name[target_place][0])
+        comm.simulate_send_address_brightness(final_target_pins[1:], address_lib.places_name[target_place][0])
+        comm.send_mixed_address_brightness(bus, address, pwm, final_target_pins[1:], address_lib.places_name[target_place][0])
 
-    return 'Motion Detected from ESP8266'
+    return_string = 'Motion at ' + light
+    return return_string
+
+
+
+# # http://192.168.0.106/ButtonDetector?light=B1&state=1
+# @app.route('/ButtonDetector')
+# def button_handler():
+#     light = request.args.get('light', default='*', type=str)
+#     state = request.args.get('state', default=0, type=int)
+#
+#     # link between the physical button and relay address
+#
+#     target_place = address_lib.button_address[light]
+#     if type(target_place) is list:
+#         for place in target_place:
+#             final_target_pins = address_lib.places_name[place]
+#             address_lib.places_name[place][0] = state
+#             comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[place][0])
+#             comm.send_address_brightness(pwm, final_target_pins[1:], address_lib.places_name[place][0])
+#     else:
+#         final_target_pins = address_lib.places_name[target_place]
+#         address_lib.places_name[target_place][0] = state
+#         comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[target_place][0])
+#         comm.send_address_brightness(pwm, final_target_pins[1:], address_lib.places_name[target_place][0])
+#
+#     return 'Button pressed by ESP8266'
 
 
 # http://192.168.0.106/ButtonDetector?light=B1&state=1
@@ -90,15 +139,44 @@ def button_handler():
         for place in target_place:
             final_target_pins = address_lib.places_name[place]
             address_lib.places_name[place][0] = state
-            comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[place][0])
-            comm.send_address_brightness(pwm, final_target_pins[1:], address_lib.places_name[place][0])
+            comm.simulate_send_address_brightness(final_target_pins[1:], address_lib.places_name[place][0])
+            comm.send_mixed_address_brightness(bus, address, pwm, final_target_pins[1:],
+                                               address_lib.places_name[place][0])
     else:
         final_target_pins = address_lib.places_name[target_place]
         address_lib.places_name[target_place][0] = state
-        comm.simulate_send_address(final_target_pins[1:], address_lib.places_name[target_place][0])
-        comm.send_address_brightness(pwm, final_target_pins[1:], address_lib.places_name[target_place][0])
+        comm.simulate_send_address_brightness(final_target_pins[1:], address_lib.places_name[target_place][0])
+        comm.send_mixed_address_brightness(bus, address, pwm, final_target_pins[1:],
+                                           address_lib.places_name[target_place][0])
 
     return 'Button pressed by ESP8266'
+
+
+# # http://192.168.0.106/BrightnessButtonDetector?light=B1&brightness=100
+# @app.route('/BrightnessButtonDetector')
+# def bright_button_handler():
+#     light = request.args.get('light', default='*', type=str)
+#     brightness = request.args.get('brightness', default=0, type=int)
+#
+#     target_place = address_lib.button_address[light]
+#     print('target places: ' + target_place)
+#     if type(target_place) is list:
+#         for place in target_place:
+#             final_target_pins = address_lib.places_name[place][1:]
+#             address_lib.places_name[place][0] = brightness
+#
+#             comm.simulate_send_address_brightness(final_target_pins,
+#                                                   address_lib.places_name[place][0])
+#             comm.send_address_brightness(pwm, final_target_pins, address_lib.places_name[place][0])
+#     else:
+#         final_target_pins = address_lib.places_name[target_place][1:]
+#         address_lib.places_name[target_place][0] = brightness
+#         comm.simulate_send_address_brightness(final_target_pins,
+#                                               address_lib.places_name[target_place][0])
+#         comm.send_address_brightness(pwm, final_target_pins, address_lib.places_name[target_place][0])
+#
+#     return 'Intensity Button pressed by ESP8266'
+
 
 
 # http://192.168.0.106/BrightnessButtonDetector?light=B1&brightness=100
@@ -108,23 +186,26 @@ def bright_button_handler():
     brightness = request.args.get('brightness', default=0, type=int)
 
     target_place = address_lib.button_address[light]
-    print('target places: ' + target_place)
+
     if type(target_place) is list:
+        # target_place = address_lib.places_name_brightness[light]
         for place in target_place:
             final_target_pins = address_lib.places_name[place][1:]
             address_lib.places_name[place][0] = brightness
-
-            comm.simulate_send_address_brightness(final_target_pins,
-                                                  address_lib.places_name[place][0])
-            comm.send_address_brightness(pwm, final_target_pins, address_lib.places_name[place][0])
+            comm.simulate_send_address_brightness(final_target_pins, address_lib.places_name[place][0])
+            comm.send_mixed_address_brightness(bus, address, pwm, final_target_pins,
+                                               address_lib.places_name[place][0])
+            # comm.send_address_brightness(pwm, final_target_pins, address_lib.places_name_brightness[place][0])
     else:
         final_target_pins = address_lib.places_name[target_place][1:]
-        address_lib.places_name[target_place][0] = brightness
-        comm.simulate_send_address_brightness(final_target_pins,
-                                              address_lib.places_name[target_place][0])
-        comm.send_address_brightness(pwm, final_target_pins, address_lib.places_name[target_place][0])
+        address_lib.button_address[target_place][0] = brightness
+        comm.simulate_send_address_brightness(final_target_pins, address_lib.places_name[target_place][0])
+        comm.send_mixed_address_brightness(bus, address, pwm, final_target_pins,
+                                           address_lib.places_name[target_place][0])
+        # comm.send_address_brightness(pwm, final_target_pins, address_lib.places_name_brightness[target_place][0])
 
     return 'Intensity Button pressed by ESP8266'
+
 
 
 @app.route('/hello')
@@ -144,6 +225,14 @@ class MacroForm(FlaskForm):
 
 class BrightnessForm(FlaskForm):
     choices = list(address_lib.places_name.keys())
+
+
+class ButtonForm(FlaskForm):
+    choices = list(address_lib.button_address.keys())
+
+
+class DetectorForm(FlaskForm):
+    choices = list(address_lib.motion_detect_address.keys())
 
 
 @app.route('/add_macros', methods=['GET', 'POST'])
@@ -187,16 +276,24 @@ def macros():
         else:
             list_of_imp_macro[0] = 100
 
-        for i in range(1, len(list_of_imp_macro)):
-            for key in list_places.keys():
-                if list_of_imp_macro[i] == key:
-                    list_places[key][0] = list_of_imp_macro[0]
-                    final_target_pins = list_places[list_of_imp_macro[i]][1:]
-                    final_state = list_places[list_of_imp_macro[i]][0]
-                    comm.simulate_send_address(final_target_pins, final_state)
-                    print('final target pin: ' + str(final_target_pins))
-                    print('final state: ' + str(final_state))
-                    comm.send_address_brightness(pwm, final_target_pins, final_state)
+        for place in list_of_imp_macro[1:]:
+            list_places[place][0] = list_of_imp_macro[0]
+
+            final_target_pins = address_lib.places_name[place][1:]
+            final_state = address_lib.places_name[place][0]
+            comm.simulate_send_address_brightness(final_target_pins, final_state)
+            comm.send_mixed_address_brightness(bus, address, pwm, final_target_pins,final_state)
+
+        # for i in range(1, len(list_of_imp_macro)):
+        #     for key in list_places.keys():
+        #         if list_of_imp_macro[i] == key:
+        #             list_places[key][0] = list_of_imp_macro[0]
+        #             final_target_pins = list_places[list_of_imp_macro[i]][1:]
+        #             final_state = list_places[list_of_imp_macro[i]][0]
+        #             comm.simulate_send_address(final_target_pins, final_state)
+        #             print('final target pin: ' + str(final_target_pins))
+        #             print('final state: ' + str(final_state))
+        #             comm.send_address_brightness(pwm, final_target_pins, final_state)
 
     return render_template('macros_button.html', list_macros=macro_list_name, form=button_form)
 
@@ -207,11 +304,12 @@ def brightness_button():
     form = BrightnessForm()
     list_places = address_lib.places_name
     if form.validate_on_submit():
-
         light_address = request.form['submit']
         light_address_brightness = request.form[light_address]
         print('brightness: ' + str(light_address_brightness))
-        address_lib.places_name[light_address][0] = light_address_brightness
+        list_places[light_address][0] = int(light_address_brightness)
+
+        # address_lib.places_name[light_address][0] = light_address_brightness
         # for key in list_places.keys():
         #     if light_address == key:
         #         target_pins = list_places[key]
@@ -223,13 +321,31 @@ def brightness_button():
 
         final_target_pins = list_places[light_address][1:]
         final_state = address_lib.places_name[light_address][0]
-        comm.simulate_send_address(final_target_pins, final_state)
+        comm.simulate_send_address_brightness(final_target_pins, final_state)
+        comm.send_mixed_address_brightness(bus, address, pwm, final_target_pins, final_state)
+
+        # comm.simulate_send_address(final_target_pins, final_state)
         # print('hello')
         # print(final_target_pins)
         # print(final_state)
-        comm.send_address_brightness(pwm, final_target_pins, final_state)
+        # comm.send_address_brightness(pwm, final_target_pins, final_state)
 
     return render_template('brightness_button.html', list_places=list_places, form=form)
+
+@app.route('/buttons', methods=['GET', 'POST'])
+def button_map():
+    form = ButtonForm()
+    list_buttons = address_lib.button_address
+
+    return render_template('buttons_page.html', list_buttons=list_buttons, form=form)
+
+
+@app.route('/motiondetector', methods=['GET', 'POST'])
+def detector_map():
+    form = DetectorForm()
+    list_detectors = address_lib.motion_detect_addresses
+
+    return render_template('motion_page.html', list_buttons=list_detectors, form=form)
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -241,16 +357,25 @@ def divide():
 
         light_address = request.form['submit']
         print('Light address: ' + light_address)
-
-        final_target_pins = address_lib.places_name[light_address][1:]
-        print('probleme: ' + str(address_lib.places_name[light_address][0]))
-        if int(address_lib.places_name[light_address][0]) >= 1:
+        target_pins = address_lib.places_name[light_address]
+        if target_pins[0] >= 1:
             address_lib.places_name[light_address][0] = 0
         else:
             address_lib.places_name[light_address][0] = 100
 
-        comm.simulate_send_address(final_target_pins, address_lib.places_name[light_address][0])
-        comm.send_address_brightness(pwm, final_target_pins, list_places[light_address][0])
+        final_target_pins = address_lib.places_name[light_address][1:]
+        final_state = address_lib.places_name[light_address][0]
+        comm.simulate_send_address_brightness(final_target_pins, final_state)
+        comm.send_mixed_address_brightness(bus, address, pwm, final_target_pins, final_state)
+
+        # print('probleme: ' + str(address_lib.places_name[light_address][0]))
+        # if int(address_lib.places_name[light_address][0]) >= 1:
+        #     address_lib.places_name[light_address][0] = 0
+        # else:
+        #     address_lib.places_name[light_address][0] = 100
+        #
+        # comm.simulate_send_address(final_target_pins, address_lib.places_name[light_address][0])
+        # comm.send_address_brightness(pwm, final_target_pins, list_places[light_address][0])
 
         # for key in list_places.keys():
         #     if light_address == key:
@@ -267,12 +392,7 @@ def divide():
         # comm.send_address_brightness(pwm, final_target_pins, list_places[light_address][0])
 
     return render_template('button.html', list_places=list_places, form=form)
-# if __name__ != '__main__':
-#     gunicorn_logger = logging.getLogger('gunicorn.error')
-#     app.logger.handlers = gunicorn_logger.handlers
-#     app.logger.setLevel(gunicorn_logger.level)
-#
+
 
 if __name__ == "__main__":
-
     app.run(host='0.0.0.0', port=5000)

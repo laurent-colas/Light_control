@@ -1,8 +1,0 @@
-Change Component Footprint: Designator=U1 Old Footprint= New Footprint=ESP32_feather
-Added Component: Designator=PT1(P090S_pot)
-Add component. Clean all parameters for all variants
-Added Pin To Net: NetName=3.3V Pin=PT1-1
-Added Pin To Net: NetName=A5 Pin=PT1-2
-Added Pin To Net: NetName=GND Pin=PT1-3
-Added Member To Class: ClassName=button_brightness_esp32 Member=Component PT1 P090S_pot
-Added Room: Name=button_brightness_esp32

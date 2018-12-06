@@ -1,0 +1,2 @@
+Change Component Footprint: Designator=PT1 Old Footprint=POT_PTA2043 New Footprint=POT_PTA3043
+Added Room: Name=button_brightness_esp32

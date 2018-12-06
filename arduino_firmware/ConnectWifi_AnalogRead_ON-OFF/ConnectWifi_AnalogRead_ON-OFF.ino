@@ -23,15 +23,15 @@ bool lastpressedbutton6 = true;
 bool lastpressedbutton7 = true;
 bool lastpressedbutton8 = true;
 
-const char* ssid = "LumiereColas";
-const char* password =  "lumierecherive";
+const char* ssid = "VIDEOTRON9664";
+const char* password =  "ym8qxtb3cg";
 
 String complete_addresse;
-const char* host = "192.168.1.106";
+const char* host = "192.168.0.106";
 const int httpPort = 8090;
 
 String http_adresse = "http://";
-String host_code = "192.168.1.106:8090";
+String host_code = "192.168.0.106:8090";
 String code = "/ButtonDetector";
 char* locations[] = {"B1", "B1","B2", "B2","B3", "B3","B4", "B4","B5", "B5","B6", "B6"};
 //String location;

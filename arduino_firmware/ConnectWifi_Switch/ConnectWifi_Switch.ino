@@ -5,11 +5,11 @@
 #define INPUT_PIN_2 34 // A2
 #define INPUT_PIN_3 39 // A3
 
-const char* ssid = "LumiereColas";
-const char* password =  "lumierecherive";
+const char* ssid = "VIDEOTRON9664";
+const char* password =  "ym8qxtb3cg";
 
 String complete_addresse;
-const char* host = "192.168.1.106";
+const char* host = "192.168.0.106";
 const int httpPort = 8090;
 String code = "/ButtonDetector";
 char* locations[] = {"B1","B2","B3"};
@@ -28,7 +28,7 @@ void setup() {
   pinMode(INPUT_PIN_1, INPUT);
   pinMode(INPUT_PIN_2, INPUT);
   pinMode(INPUT_PIN_3, INPUT);
-  ConnectWiFi();
+//  ConnectWiFi();
 
 }
 
@@ -55,7 +55,7 @@ int LightStateChange(int ButtonNum, int PreviousState, int ButtonRead) {
       Serial.print(ButtonNum);
       Serial.print(" reads: ");
       Serial.println(ButtonRead);
-      SendSwitchState(ButtonNum, ButtonRead);
+//      SendSwitchState(ButtonNum, ButtonRead);
   }
   return ButtonRead;
 }
