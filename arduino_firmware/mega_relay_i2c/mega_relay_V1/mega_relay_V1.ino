@@ -123,6 +123,7 @@ void chop_data() {
 }
 
 void update_relay_state() {
+  Serial.println(relay_addr);
   if (relay_addr == "A01") {
     if (relay_state == 1) {
       digitalWrite(RELAY1,0);
@@ -253,130 +254,130 @@ void update_relay_state() {
     }
   if (relay_addr == "A17") {
     if (relay_state == 1) {
-      digitalWrite(RELAY1,0);
+      digitalWrite(RELAY17,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY1,1);
+      digitalWrite(RELAY17,1);
     }
   }
   if (relay_addr == "A18") {
     if (relay_state == 1) {
-      digitalWrite(RELAY2,0);
+      digitalWrite(RELAY18,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY2,1);
+      digitalWrite(RELAY18,1);
     }
   }
   if (relay_addr == "A19") {
     if (relay_state == 1) {
-      digitalWrite(RELAY3,0);
+      digitalWrite(RELAY19,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY3,1);
+      digitalWrite(RELAY19,1);
     }
   }
   if (relay_addr == "A20") {
     if (relay_state == 1) {
-      digitalWrite(RELAY4,0);
+      digitalWrite(RELAY20,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY4,1);
+      digitalWrite(RELAY20,1);
     }
   }
   if (relay_addr == "A21") {
     if (relay_state == 1) {
-      digitalWrite(RELAY5,0);
+      digitalWrite(RELAY21,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY5,1);
+      digitalWrite(RELAY21,1);
     }
   }
   if (relay_addr == "A22") {
     if (relay_state == 1) {
-      digitalWrite(RELAY6,0);
+      digitalWrite(RELAY22,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY6,1);
+      digitalWrite(RELAY22,1);
     }
   }
   if (relay_addr == "A23") {
     if (relay_state == 1) {
-      digitalWrite(RELAY7,0);
+      digitalWrite(RELAY23,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY7,1);
+      digitalWrite(RELAY23,1);
     }
   }
   if (relay_addr == "A24") {
     if (relay_state == 1) {
-      digitalWrite(RELAY8,0);
+      digitalWrite(RELAY24,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY8,1);
+      digitalWrite(RELAY24,1);
     }
   }
   if (relay_addr == "A25") {
     if (relay_state == 1) {
-      digitalWrite(RELAY9,0);
+      digitalWrite(RELAY25,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY9,1);
+      digitalWrite(RELAY25,1);
     }
   }
   if (relay_addr == "A26") {
     if (relay_state == 1) {
-      digitalWrite(RELAY10,0);
+      digitalWrite(RELAY26,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY10,1);
+      digitalWrite(RELAY26,1);
     }
   }
   if (relay_addr == "A27") {
     if (relay_state == 1) {
-      digitalWrite(RELAY11,0);
+      digitalWrite(RELAY27,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY11,1);
+      digitalWrite(RELAY27,1);
     }
   }
   if (relay_addr == "A28") {
     if (relay_state == 1) {
-      digitalWrite(RELAY12,0);
+      digitalWrite(RELAY28,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY12,1);
+      digitalWrite(RELAY28,1);
     }
   }
   if (relay_addr == "A29") {
     if (relay_state == 1) {
-      digitalWrite(RELAY13,0);
+      digitalWrite(RELAY29,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY13,1);
+      digitalWrite(RELAY29,1);
     }
   }
   if (relay_addr == "A30") {
     if (relay_state == 1) {
-      digitalWrite(RELAY14,0);
+      digitalWrite(RELAY30,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY14,1);
+      digitalWrite(RELAY30,1);
     }
   }
   if (relay_addr == "A31") {
     if (relay_state == 1) {
-      digitalWrite(RELAY15,0);
+      digitalWrite(RELAY31,0);
     }
     if (relay_state == 0) {
-      digitalWrite(RELAY15,1);
+      digitalWrite(RELAY31,1);
     }
   }
   if (relay_addr == "A32") {
       if (relay_state == 1) {
-        digitalWrite(RELAY16,0);
+        digitalWrite(RELAY32,0);
       }
       if (relay_state == 0) {
-        digitalWrite(RELAY16,1);
+        digitalWrite(RELAY32,1);
       }
     }
 }

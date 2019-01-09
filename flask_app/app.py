@@ -309,16 +309,6 @@ def brightness_button():
         print('brightness: ' + str(light_address_brightness))
         list_places[light_address][0] = int(light_address_brightness)
 
-        # address_lib.places_name[light_address][0] = light_address_brightness
-        # for key in list_places.keys():
-        #     if light_address == key:
-        #         target_pins = list_places[key]
-        #         list_places[key][0] = light_address_brightness
-                # if target_pins[0] >= 1:
-                #     list_places[key][0] = 0
-                # else:
-                #     list_places[key][0] = light_address_brightness
-
         final_target_pins = list_places[light_address][1:]
         final_state = address_lib.places_name[light_address][0]
         comm.simulate_send_address_brightness(final_target_pins, final_state)
@@ -390,7 +380,7 @@ def divide():
         # final_state = list_places[light_address][0]
         # comm.simulate_send_address(final_target_pins, final_state)
         # comm.send_address_brightness(pwm, final_target_pins, list_places[light_address][0])
-
+    print('done')
     return render_template('button.html', list_places=list_places, form=form)
 
 

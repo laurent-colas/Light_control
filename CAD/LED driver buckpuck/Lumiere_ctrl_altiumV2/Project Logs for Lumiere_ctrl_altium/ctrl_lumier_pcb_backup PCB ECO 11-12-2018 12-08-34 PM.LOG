@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=Vin1 Pin=P2-1
+Removed Pin From Net: NetName=Vin2 Pin=P2-2
+Removed Pin From Net: NetName=Vin3 Pin=P2-3
+Removed Pin From Net: NetName=Vin4 Pin=P2-4
+Removed Pin From Net: NetName=Vin6 Pin=P2-6
+Removed Pin From Net: NetName=Gnd Pin=P2-7
+Removed Pin From Net: NetName=Gnd Pin=P2-8
+Removed Pin From Net: NetName=VDD Pin=P2-9
+Added Pin To Net: NetName=VDD Pin=P2-1
+Added Pin To Net: NetName=Gnd Pin=P2-2
+Added Pin To Net: NetName=Gnd Pin=P2-3
+Added Pin To Net: NetName=Vin6 Pin=P2-4
+Added Pin To Net: NetName=Vin4 Pin=P2-6
+Added Pin To Net: NetName=Vin3 Pin=P2-7
+Added Pin To Net: NetName=Vin2 Pin=P2-8
+Added Pin To Net: NetName=Vin1 Pin=P2-9
+Added Member To Class: ClassName=lumiere_ctrl_shematic Member=Component P6 Header 8
+Added Room: Name=lumiere_ctrl_shematic

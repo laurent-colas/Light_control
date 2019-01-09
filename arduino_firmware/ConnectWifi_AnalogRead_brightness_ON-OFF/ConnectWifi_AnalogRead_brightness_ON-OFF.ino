@@ -1,11 +1,11 @@
 #include <WiFi.h>
 #include <WiFiClient.h>
 
-#define ANALOG_PIN_1 25 // A1
+#define ANALOG_PIN_1 32 // A1
 #define ANALOG_PIN_2 34 // A2
 #define ANALOG_PIN_3 39 // A3
 #define ANALOG_PIN_4 36 // A4
-#define ANALOG_POT 4 // A5
+#define ANALOG_POT 33 // A5
 
 // pin 4 et pin 25 ne fonctionne pas lorsque wifi fonctionne
 // essayer pin 13 (A12) et pin 33 (A9) pin 32 (A7)
@@ -52,12 +52,12 @@ void loop() {
 
 //  Serial.println(analogRead(ANALOG_POT));
 //  Serial.println(analogRead(ANALOG_POT));
-  int PotLevelss = (analogRead(ANALOG_POT)*100) / 4095;
-  Serial.println(analogRead(ANALOG_POT));
+//  int PotLevelss = (analogRead(ANALOG_POT)*100) / 4095;
+//  Serial.println(analogRead(ANALOG_PIN_1));
 //  
   
-//  ButtonRead = analogRead(ANALOG_PIN_1);
-//  PreviousPressedButton1 = ReadButtonONOFF(0, ButtonRead, PreviousPressedButton1);  
+  ButtonRead = analogRead(ANALOG_PIN_1);
+  PreviousPressedButton1 = ReadButtonONOFF(0, ButtonRead, PreviousPressedButton1);  
 
   ButtonRead = analogRead(ANALOG_PIN_2);
   PreviousPressedButton2 = ReadButtonONOFF(4, ButtonRead, PreviousPressedButton2);

@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=IO13 Pin=P5-1
+Removed Pin From Net: NetName=IO13 Pin=P7-4
+Added Pin To Net: NetName=IO13 Pin=P5-6
+Added Pin To Net: NetName=IO13 Pin=P7-9
+Change Net Name : Old Net Name=IO13 New Net Name=IO32
+Added Pin To Net: NetName=IO13 Pin=P5-1
+Added Pin To Net: NetName=IO13 Pin=P7-4
+Added Net: Name=IO13
+Added Room: Name=button_brightness_esp32

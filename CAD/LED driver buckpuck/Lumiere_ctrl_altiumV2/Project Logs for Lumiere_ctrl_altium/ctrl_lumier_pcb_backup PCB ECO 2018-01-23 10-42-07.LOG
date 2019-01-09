@@ -1,0 +1,8 @@
+Change Component Designator: OldDesignator=P5 NewDesignator=P6
+Change Component Designator: OldDesignator=P6 NewDesignator=P7
+Change Component Designator: OldDesignator=P7 NewDesignator=P8
+Change Component Designator: OldDesignator=P8 NewDesignator=P9
+Change Component Designator: OldDesignator=P9 NewDesignator=P10
+Change Component Designator: OldDesignator=P10 NewDesignator=P11
+Added Member To Class: ClassName=lumiere_ctrl_shematic Member=Component P11 Header 8
+Added Room: Name=lumiere_ctrl_shematic

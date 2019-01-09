@@ -1,0 +1,13 @@
+Change Component Footprint: Designator=P5 Old Footprint=HDR1X7 New Footprint=HDR1X8
+Change Component Footprint: Designator=P6 Old Footprint=HDR1X7 New Footprint=HDR1X8
+Change Component Footprint: Designator=P7 Old Footprint=HDR1X7 New Footprint=HDR1X8
+Change Component Footprint: Designator=P8 Old Footprint=HDR1X7 New Footprint=HDR1X8
+Change Component Footprint: Designator=P9 Old Footprint=HDR1X7 New Footprint=HDR1X8
+Change Component Footprint: Designator=P10 Old Footprint=HDR1X7 New Footprint=HDR1X8
+Change Component Comment : Designator=P5 Old Comment=Header 7 New Comment=Header 8
+Change Component Comment : Designator=P6 Old Comment=Header 7 New Comment=Header 8
+Change Component Comment : Designator=P7 Old Comment=Header 7 New Comment=Header 8
+Change Component Comment : Designator=P8 Old Comment=Header 7 New Comment=Header 8
+Change Component Comment : Designator=P9 Old Comment=Header 7 New Comment=Header 8
+Change Component Comment : Designator=P10 Old Comment=Header 7 New Comment=Header 8
+Added Room: Name=lumiere_ctrl_shematic
