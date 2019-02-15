@@ -1,5 +1,6 @@
 #include <ESP8266WiFi.h>
 
+
 #define INPUT_PIN_1 0 // ESP8266 feather pull down required
 //#define INPUT_PIN_1 2 // Arduino UNO
 //#define INPUT_PIN_1 A1 // ESP32
@@ -10,7 +11,7 @@ const char* ssid     = "LumiereColas";
 const char* password = "lumierecherive";
 
 String complete_addresse;
-const char* host = "192.168.0.106";
+const char* host = "192.168.1.106";
 const int httpPort = 5000;
 
 String url = "/MotionDetector";
@@ -27,14 +28,18 @@ unsigned long motionDelay = 20000;
 unsigned long motionTimer; 
 bool inMotion = false;
 
+int WifiTest = 0;
+
 void setup() {
   Serial.begin(115200);
   delay(10);
-//  pinMode(INPUT_PIN_1,INPUT);
-//  ConnectToInternet();
+  if (WifiTest == 1) {
+    ConnectToInternet();
+  }
   ConfigurePins();
   Serial.println("PIR motion sensor getting ready");
   delay(15000);
+  Serial.println("Ready!");
 }
 
 void loop() {
@@ -48,16 +53,27 @@ void loop() {
 int MotionDetection(int ButtonNum, int ButtonRead, boolean inMotion) {
   if (ButtonRead == HIGH && !inMotion) {
     Serial.println("Motion Detected");
-//    SendMotionDetection(inMotion);
+    if (WifiTest == 1) {
+      SendMotionDetection(inMotion);
+    }
     motionTimer = millis();
     inMotion = true;
     digitalWrite(LED_BUILTIN, LOW);
   }
   else if (millis() - motionTimer >= motionDelay && inMotion) {
-//    SendMotionDetection(inMotion);
-    Serial.println("Motion UnDetected");
-    inMotion = false;
-    digitalWrite(LED_BUILTIN, HIGH);
+    if (ButtonRead == HIGH) {
+      Serial.println("Motion continued");
+      motionTimer = millis();
+      inMotion = true;
+    }
+    else {
+      if (WifiTest == 1) {
+        SendMotionDetection(inMotion);
+      }
+      Serial.println("Motion UnDetected");
+      inMotion = false;
+      digitalWrite(LED_BUILTIN, HIGH);
+    }
   }
   return inMotion;
 }

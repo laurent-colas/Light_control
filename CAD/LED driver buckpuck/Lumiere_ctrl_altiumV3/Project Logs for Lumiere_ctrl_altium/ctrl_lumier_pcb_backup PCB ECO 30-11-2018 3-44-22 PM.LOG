@@ -1,0 +1,14 @@
+Change Component Footprint: Designator=R1 Old Footprint=1206 New Footprint=STA_RMCF1206
+Change Component Footprint: Designator=R2 Old Footprint=1206 New Footprint=STA_RMCF1206
+Change Component Footprint: Designator=R3 Old Footprint=1206 New Footprint=STA_RMCF1206
+Change Component Footprint: Designator=R4 Old Footprint=1206 New Footprint=STA_RMCF1206
+Change Component Footprint: Designator=R5 Old Footprint=1206 New Footprint=STA_RMCF1206
+Change Component Footprint: Designator=R6 Old Footprint=1206 New Footprint=STA_RMCF1206
+Change Component Footprint: Designator=R7 Old Footprint=1206 New Footprint=STA_RMCF1206
+Change Component Footprint: Designator=R8 Old Footprint=1206 New Footprint=STA_RMCF1206
+Change Component Footprint: Designator=R9 Old Footprint=1206 New Footprint=STA_RMCF1206
+Change Component Footprint: Designator=R10 Old Footprint=1206 New Footprint=STA_RMCF1206
+Change Component Footprint: Designator=R11 Old Footprint=1206 New Footprint=STA_RMCF1206
+Change Component Footprint: Designator=R12 Old Footprint=1206 New Footprint=STA_RMCF1206
+Added Member To Class: ClassName=lumiere_ctrl_shematic Member=Component P1 Header 12
+Added Room: Name=lumiere_ctrl_shematic

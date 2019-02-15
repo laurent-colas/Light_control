@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=Ref_LED_1 Pin=U7-16
+Removed Pin From Net: NetName=Ref_LED_1 Pin=U7-17
+Removed Pin From Net: NetName=Ctrl_LED_1 Pin=U7-18
+Removed Pin From Net: NetName=Ctrl_LED_2 Pin=U7-19
+Removed Pin From Net: NetName=Ref_LED_2 Pin=U7-20
+Removed Pin From Net: NetName=Ref_LED_2 Pin=U7-21
+Added Pin To Net: NetName=Ref_LED_2 Pin=U7-16
+Added Pin To Net: NetName=Ref_LED_2 Pin=U7-17
+Added Pin To Net: NetName=Ctrl_LED_2 Pin=U7-18
+Added Pin To Net: NetName=Ctrl_LED_1 Pin=U7-19
+Added Pin To Net: NetName=Ref_LED_1 Pin=U7-20
+Added Pin To Net: NetName=Ref_LED_1 Pin=U7-21
+Added Room: Name=lumiere_ctrl_shematic

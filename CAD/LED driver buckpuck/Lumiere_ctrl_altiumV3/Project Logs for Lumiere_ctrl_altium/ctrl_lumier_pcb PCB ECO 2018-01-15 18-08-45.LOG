@@ -1,0 +1,39 @@
+Added Component: Designator=C1(1206)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Package"; Value = "1206"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Ceramic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "0.1u"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C2(1206)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Package"; Value = "1206"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Ceramic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "0.1u"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C3(1206)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Package"; Value = "1206"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Ceramic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "0.1u"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C4(1206)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Package"; Value = "1206"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Ceramic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "0.1u"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=Vin+ Pin=C1-1
+Added Pin To Net: NetName=Gnd Pin=C1-2
+Added Pin To Net: NetName=Vin+ Pin=C2-1
+Added Pin To Net: NetName=Gnd Pin=C2-2
+Added Pin To Net: NetName=Vin+ Pin=C3-1
+Added Pin To Net: NetName=Gnd Pin=C3-2
+Added Pin To Net: NetName=Vin+ Pin=C4-1
+Added Pin To Net: NetName=Gnd Pin=C4-2
+Added Pin To Net: NetName=Gnd Pin=P6-1
+Added Member To Class: ClassName=lumiere_ctrl_shematic Member=Component C1 CapSMD
+Added Member To Class: ClassName=lumiere_ctrl_shematic Member=Component C2 CapSMD
+Added Member To Class: ClassName=lumiere_ctrl_shematic Member=Component C3 CapSMD
+Added Member To Class: ClassName=lumiere_ctrl_shematic Member=Component C4 CapSMD
+Added Member To Class: ClassName=lumiere_ctrl_shematic Member=Component U1 MMBT3906LT1G
+Added Room: Name=lumiere_ctrl_shematic

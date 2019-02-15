@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=IO1 Pin=P6-1
+Removed Pin From Net: NetName=IO2 Pin=P6-2
+Removed Pin From Net: NetName=IO3 Pin=P6-3
+Removed Pin From Net: NetName=IO4 Pin=P6-4
+Removed Pin From Net: NetName=IO5 Pin=P6-5
+Removed Pin From Net: NetName=IO6 Pin=P6-6
+Change Component Designator: OldDesignator=P6 NewDesignator=P4
+Added Pin To Net: NetName=IO6 Pin=P4-1
+Added Pin To Net: NetName=IO5 Pin=P4-2
+Added Pin To Net: NetName=IO4 Pin=P4-3
+Added Pin To Net: NetName=IO3 Pin=P4-4
+Added Pin To Net: NetName=IO2 Pin=P4-5
+Added Pin To Net: NetName=IO1 Pin=P4-6
+Added Member To Class: ClassName=lumiere_ctrl_shematic Member=Component P4 Header 6
+Added Room: Name=lumiere_ctrl_shematic
