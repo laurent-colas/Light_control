@@ -4,7 +4,7 @@
 #define ANALOG_PIN_1 32 // A1
 #define ANALOG_PIN_2 34 // A2
 #define ANALOG_PIN_3 39 // A3
-#define ANALOG_PIN_4 36 // A4
+#define ANALOG_PIN_4 A4 // A4
 #define ANALOG_POT 33 // A5
 
 // pin 4 et pin 25 ne fonctionne pas lorsque wifi fonctionne
@@ -17,6 +17,7 @@ int PreviousPressedButton1 = 0;
 int PreviousPressedButton2 = 0;
 int PreviousPressedButton3 = 0;
 int PreviousPressedButton4 = 0;
+
 int state;
 int brightness;
 int PotLevel;
@@ -35,26 +36,24 @@ char* locations[] = {"B1", "B1", "B2", "B2", "B3", "B3", "B4", "B4",
 
 unsigned long timeout;
 
+int debug = 1;
+
+
 WiFiClient client;
 
 void setup() {
 
   // put your setup code here, to run once:
   Serial.begin(115200);
-  
-  
-  ConnectToWiFi();
 
-  
+  if (debug == 0) {
+    ConnectToWiFi();
+  }
+
+   
 }
 
 void loop() {
-
-//  Serial.println(analogRead(ANALOG_POT));
-//  Serial.println(analogRead(ANALOG_POT));
-//  int PotLevelss = (analogRead(ANALOG_POT)*100) / 4095;
-//  Serial.println(analogRead(ANALOG_PIN_1));
-//  
   
   ButtonRead = analogRead(ANALOG_PIN_1);
   PreviousPressedButton1 = ReadButtonONOFF(0, ButtonRead, PreviousPressedButton1);  
@@ -114,38 +113,41 @@ void SendLightState(int PressedButton, int PotLevel){
   if (state == 0) {
     PotLevel = 0;
   }
-  if (!client.connect(host, httpPort)) {
-    Serial.println("connection failed");
-    return;
+  
+  if (debug == 0) {
+    if (!client.connect(host, httpPort)) {
+      Serial.println("connection failed");
+      return;
+    }
+  
+    complete_addresse= code + "?light=" + locations[PressedButton-1] +"&brightness=" + PotLevel;
+    Serial.print("Requesting URL: ");
+    Serial.println(complete_addresse);
+  
+    client.print(String("GET ") + complete_addresse + " HTTP/1.1\r\n" +
+                   "Host: " + host + "\r\n" +
+                   "Connection: close\r\n\r\n");
+  //  client.print(String("GET ") + complete_addresse + " HTTP/1.1\r\n");               
+    unsigned long timeout = millis();
+    while (client.available() == 0) {
+        if (millis() - timeout > 5000) {
+            Serial.println(">>> Client Timeout !");
+            client.stop();
+            return;
+        }
   }
   
-  complete_addresse= code + "?light=" + locations[PressedButton-1] +"&brightness=" + PotLevel;
-  Serial.print("Requesting URL: ");
-  Serial.println(complete_addresse);
-
-  client.print(String("GET ") + complete_addresse + " HTTP/1.1\r\n" +
-                 "Host: " + host + "\r\n" +
-                 "Connection: close\r\n\r\n");
-//  client.print(String("GET ") + complete_addresse + " HTTP/1.1\r\n");               
-  unsigned long timeout = millis();
-  while (client.available() == 0) {
-      if (millis() - timeout > 5000) {
-          Serial.println(">>> Client Timeout !");
-          client.stop();
-          return;
-      }
-  }
+    // Read all the lines of the reply from server and print them to Serial
+    while(client.available()) {
+        String line = client.readStringUntil('\r');
+        Serial.print(line);
+    }
   
-  // Read all the lines of the reply from server and print them to Serial
-  while(client.available()) {
-      String line = client.readStringUntil('\r');
-      Serial.print(line);
-  }
+    Serial.println();
+    Serial.println("closing connection");
+    complete_addresse = "";
+    }
 
-  Serial.println();
-  Serial.println("closing connection");
-
-  complete_addresse = "";
 }
 
 

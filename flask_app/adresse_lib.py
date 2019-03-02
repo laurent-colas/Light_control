@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 import collections
-
+import csv
 
 def initialize_dicts(dicty, list_keys):
     dictionary = collections.OrderedDict()
@@ -8,6 +8,13 @@ def initialize_dicts(dicty, list_keys):
         dictionary[key_list] = dicty[key_list]
     return dictionary
 
+# def initialize_macros_csv():
+#     with open('macro_list.csv', mode='a', newline='') as macro_list_file:
+#         print("loading macro")
+#         test = macro_places[1:]
+#         test.insert(0, name_new_macro)
+#         writer = csv.writer(macro_list_file, quotechar='"', quoting=csv.QUOTE_ALL)
+#         writer.writerow(test)
 
 button_addresses = {
     'B1': ['Entrée près de la porte'],
@@ -64,6 +71,7 @@ macros_nameses = {'All': [0, 'Garde-Robe', 'Entrée près de la porte', 'Entrée
                 'Exemple': [0, 'Garde-Robe', 'Entrée près de la porte', 'Entrée vers le salon']}
 list_macros_names = ['All', 'Exemple']
 macros_names = initialize_dicts(macros_nameses, list_macros_names)
+
 
 # # 'key': [brightness(int), places(int), places(int), ... ],
 # places_name_brightness = {

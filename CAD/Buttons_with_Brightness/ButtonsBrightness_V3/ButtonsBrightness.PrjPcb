@@ -105,30 +105,6 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=KIUVJTTQ
 
-[GeneratedDocument1]
-DocumentPath=Project Outputs for ButtonsBrightness\ButtonsBrightnessPCB.DRR
-DItemRevisionGUID=
-
-[GeneratedDocument2]
-DocumentPath=Project Outputs for ButtonsBrightness\ButtonsBrightnessPCB.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Project Outputs for ButtonsBrightness\ButtonsBrightnessPCB.LDP
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Project Outputs for ButtonsBrightness\ButtonsBrightnessPCB.REP
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Project Outputs for ButtonsBrightness\ButtonsBrightnessPCB.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs for ButtonsBrightness\Design Rule Check - ButtonsBrightnessPCB.html
-DItemRevisionGUID=
-
 [Configuration1]
 Name=Sources
 ParameterCount=0

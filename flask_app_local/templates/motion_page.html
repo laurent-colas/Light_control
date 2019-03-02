@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% set active_page = "motion_page" %}
+
+{% block header %}
+    <h1>{% block title %}All lights with motion detectors{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post" action="{{ url_for('detector_map') }}">
+            {{ form.hidden_tag() }}
+
+        <table border = 1>
+            {% for key, values in list_buttons.items() %}
+                <tr>
+                    <th> {{ key }}</th>
+                    {% for value in values %}
+                            <th> {{ value }}</th>
+                        {% endfor %}
+{#                    {% if values|length > 1 %}#}
+{#                        #}
+{#                    {% else %}#}
+{#                        <th> {{ values }}</th>#}
+{#                    {% endif %}#}
+
+                </tr>
+            {% endfor %}
+        </table>
+        </form>
+{% endblock %}

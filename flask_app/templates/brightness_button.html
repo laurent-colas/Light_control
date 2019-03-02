@@ -12,14 +12,15 @@
         <table border = 1>
             {% for key, value in list_places.items() %}
                 <tr>
-                    <th> <input type="submit" name="submit" value="{{key}}"/> <br>
+                    {% if value[1] < 16 %}
+                         <th> <input type="submit" name="submit" value="{{key}}"/> <br>
                         <input type="range" min="0" max="100" value="{{ value[0] }}" name="{{key}}" class="slider"/> </th>
-                    {% if value[0] == 0 %}
-                        <td> <img src="{{ url_for('static',filename="light-bulb-off.jpg") }}"/> </td>
-                    {% else %}
-                        <td> <img src="{{ url_for('static',filename="light-bulb-on.jpg") }}"/> </td>
-                    {% endif %}
-
+                        {% if value[0] == 0 %}
+                            <td> <img src="{{ url_for('static',filename="light-bulb-off.jpg") }}"/> </td>
+                        {% else %}
+                            <td> <img src="{{ url_for('static',filename="light-bulb-on.jpg") }}"/> </td>
+                        {% endif %}
+                    {% endif  %}
                 </tr>
             {% endfor %}
         </table>

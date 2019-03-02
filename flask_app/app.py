@@ -301,8 +301,10 @@ def macros():
 @app.route('/brightness', methods=['GET', 'POST'])
 def brightness_button():
 
+    # get
     form = BrightnessForm()
     list_places = address_lib.places_name
+
     if form.validate_on_submit():
         light_address = request.form['submit']
         light_address_brightness = request.form[light_address]
@@ -336,6 +338,51 @@ def detector_map():
     list_detectors = address_lib.motion_detect_addresses
 
     return render_template('motion_page.html', list_buttons=list_detectors, form=form)
+
+# @app.route('/relaycodes', methods=['GET', 'POST'])
+# def relay_codes():
+#
+#     form = DivideForm()
+#     list_places = address_lib.places_name
+#     if form.validate_on_submit():
+#
+#         light_address = request.form['submit']
+#         print('Light address: ' + light_address)
+#         target_pins = address_lib.places_name[light_address]
+#         if target_pins[0] >= 1:
+#             address_lib.places_name[light_address][0] = 0
+#         else:
+#             address_lib.places_name[light_address][0] = 100
+#
+#         final_target_pins = address_lib.places_name[light_address][1:]
+#         final_state = address_lib.places_name[light_address][0]
+#         comm.simulate_send_address_brightness(final_target_pins, final_state)
+#         comm.send_mixed_address_brightness(bus, address, pwm, final_target_pins, final_state)
+
+        # print('probleme: ' + str(address_lib.places_name[light_address][0]))
+        # if int(address_lib.places_name[light_address][0]) >= 1:
+        #     address_lib.places_name[light_address][0] = 0
+        # else:
+        #     address_lib.places_name[light_address][0] = 100
+        #
+        # comm.simulate_send_address(final_target_pins, address_lib.places_name[light_address][0])
+        # comm.send_address_brightness(pwm, final_target_pins, list_places[light_address][0])
+
+        # for key in list_places.keys():
+        #     if light_address == key:
+        #         target_pins = list_places[key]
+        #         print(target_pins)
+        #         if target_pins[0] >= 1:
+        #             list_places[key][0] = 0
+        #         else:
+        #             list_places[key][0] = 100
+
+        # final_target_pins = list_places[light_address][1:]
+        # final_state = list_places[light_address][0]
+        # comm.simulate_send_address(final_target_pins, final_state)
+        # comm.send_address_brightness(pwm, final_target_pins, list_places[light_address][0])
+    # print('done')
+    # return render_template('relay_page.html', list_places=list_places, form=form)
 
 
 @app.route('/', methods=['GET', 'POST'])
