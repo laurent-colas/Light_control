@@ -1,0 +1,7 @@
+sqlite3
+csv
+flask_wtf
+flask_thumbnails
+wtforms
+threading
+Adafruit_PCA9685

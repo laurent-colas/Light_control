@@ -1,0 +1,6 @@
+pi@raspberrypi:/var/log/apache2 $
+
+pi@raspberrypi:/etc/apache2/sites-available $
+
+
+(testenv) pi@raspberrypi:~/FlaskDeploy/FlaskDeploy $

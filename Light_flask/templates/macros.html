@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% set active_page = "add_macros" %}
+
+{% block header %}
+    <h1>{% block title %}Add Macros{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <form action="{{ url_for('add_macros') }}" method="POST" >
+        {{ form.csrf_token }}
+
+        {{ form.macro_new_name.label }}
+        {{ form.macro_new_name(size=20) }}
+        <input type="submit" value="submit"> <br>
+
+        {% for i in choices %}
+            <input type="checkbox" name="room" value="{{ i }}"> {{ i }} <br>
+        {% endfor %}
+
+    </form>
+{% endblock %}
+

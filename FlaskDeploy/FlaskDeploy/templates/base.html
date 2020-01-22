@@ -1,0 +1,40 @@
+<!doctype html>
+<title>
+    {% block title %}{% endblock %}
+</title>
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% endblock %}
+</head>
+
+
+{% set navigation_bar = [
+    ('/LightApp/', 'all_lights', 'All button Index'),
+    ('/LightApp/macros', 'macros', 'Light macros'),
+    ('/LightApp/enternewmacros', 'add_macros', 'Add Light macros'),
+    ('/LightApp/enternewswitch', 'add_switch', 'Add Light switch'),
+    ('/LightApp/switch_list','switch_list','View linked switches'),
+    ('/LightApp/macros_list','macros_list','View linked macros')
+] -%}
+
+{% set active_page = active_page|default('button_page') -%}
+
+<ul class="topnav" id="navigation">
+{% for href, id, caption in navigation_bar %}
+      <a class = "{% if id == active_page %} active {% endif %}"
+         href="{{ href|e }}">{{ caption|e }}</a>
+{% endfor %}
+</ul>
+
+<section class="content">
+    <header>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block header %}{% endblock %}
+    </header>
+  {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+  {% endfor %}
+
+  {% block content %}{% endblock %}
+</section>

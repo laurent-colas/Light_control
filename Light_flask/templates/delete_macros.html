@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% set active_page = "delete_macros" %}
+
+{% block header %}
+    <h1>{% block title %}Delete Macros{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <form action="{{ url_for('delete_macros') }}" method="POST" >
+        {{ form.csrf_token }}
+
+        <input type="submit" value="submit"> <br>
+
+        {% for i in choices %}
+            <input type="radio" name="room" value="{{ i }}"> {{ i }} <br>
+        {% endfor %}
+
+    </form>
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% set active_page = "switch_list" %}
+
+{% block header %}
+    <h1>{% block title %}Switch List{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <form method="POST" action="{{ url_for('switch_list') }}">
+        {{ form.hidden_tag() }}
+        <table border = 1>
+            <thead>
+                <td>Switch Name</td>
+                <td>Brightness</td>
+                <td>Linked Macro</td>
+             </thead>
+            {% for row in rows %}
+                <tr>
+                    <td> {{ row[0] }} </td>
+                    <td> {{ row[1] }} </td>
+                    <td> {{ row[3] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </form>
+{% endblock %}

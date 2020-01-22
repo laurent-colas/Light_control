@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% set active_page = "all_lights" %}
+
+{% block header %}
+    <h1>{% block title %}All Lights{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <form method="POST" action="{{ url_for('all_lights') }}">
+        {{ form.hidden_tag() }}
+        <table border = 1>
+            {% for row in rows %}
+                <tr>
+                    <th> <input type="submit" name="submit" value="{{row[1]}}"/> <br>
+                    <input type="range" min="0" max="100" value="{{ row[2] }}" name="{{row[1]}}" class="slider"/> </th></th>
+                    {% if row[2] == 0 %}
+                        <td> <img src="{{ url_for('static',filename="light-bulb-off.jpg") }}"/> </td>
+                    {% else %}
+                        <td> <img src="{{ url_for('static',filename="light-bulb-on.jpg") }}"/> </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+    </form>
+{% endblock %}
