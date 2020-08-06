@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [remote_control_light.PrjPcb]
+   Generated File[remote_control_light.TXT]
+   Generated File[remote_control_light.LDP]
+   Generated File[remote_control_light.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 09:37:16 On 2020-07-29

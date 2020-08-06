@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Motion_detector_ESP32.PrjPcb]
+   Generated File[Motion_detector_ESP32.TXT]
+   Generated File[Motion_detector_ESP32.LDP]
+   Generated File[Motion_detector_ESP32.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 16:43:17 On 2020-07-28

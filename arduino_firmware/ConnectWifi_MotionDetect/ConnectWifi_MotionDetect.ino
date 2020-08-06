@@ -7,12 +7,12 @@
 
 
 
-const char* ssid     = "LumiereColas";
+const char* ssid     = "Sisters";
 const char* password = "lumierecherive";
 
 String complete_addresse;
 const char* host = "192.168.1.106";
-const int httpPort = 5000;
+const int httpPort = 80;
 
 String url = "/MotionDetector";
 const char* lightId = "?light=";

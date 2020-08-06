@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: remote_control_light.PcbDoc   2020-07-29  09:11:22
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : remote_control_light.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      28mil (0.711mm)                                           Round             1         PTH        0.00inch (0.00mm)
+T2      39mil (1mm)                                               Round             40        PTH        0.00inch (0.00mm)
+T3      40mil (1.016mm)                                           Round             30        PTH        0.00inch (0.00mm)
+T4      50mil (1.27mm)                                            Round             1         PTH        0.00inch (0.00mm)
+T5      51mil (1.3mm)                                             Round             3         PTH        0.00inch (0.00mm)
+T6      67mil (1.7mm)                                             Round             4         PTH        0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              79
+
+Total Processing Time (hh:mm:ss) : 00:00:00
